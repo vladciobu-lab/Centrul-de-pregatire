@@ -1,0 +1,231 @@
+---
+const navLinks = [
+  { href: '/', label: 'Acasă' },
+  { href: '/despre', label: 'Despre' },
+  {
+    label: 'Servicii',
+    dropdown: [
+      { href: '/servicii#examen', label: 'Pregătire examen (EN și BAC)' },
+      { href: '/servicii#recuperare', label: 'Recuperare la materie' },
+      { href: '/servicii#cunostinta', label: 'Ședință de cunoaștere gratuită' },
+    ],
+  },
+  {
+    label: 'Materii',
+    dropdown: [
+      { href: '/materii/romana', label: 'Limba și Literatura Română' },
+      { href: '/materii/matematica', label: 'Matematică' },
+      { href: '/materii/logica', label: 'Logică, Argumentare și Comunicare' },
+      { href: '/materii/istorie', label: 'Istorie' },
+      { href: '/materii/geografie', label: 'Geografie' },
+      { href: '/materii/biologie', label: 'Biologie' },
+    ],
+  },
+  { href: '/blog', label: 'Blog' },
+  { href: '/contact', label: 'Contact' },
+];
+
+const currentPath = Astro.url.pathname;
+---
+
+<header
+  id="site-header"
+  class="fixed top-0 left-0 right-0 z-50 bg-[#FAF3E7]/95 backdrop-blur-sm border-b border-[#E8DDD0] transition-shadow duration-300"
+>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-16 lg:h-20">
+      <!-- Logo -->
+      <a href="/" class="flex items-center gap-3 shrink-0" aria-label="Centrul de Pregătire Constanța - Acasă">
+        <img
+          src="/logo.jpeg"
+          alt="Centrul de Pregătire Constanța"
+          class="h-10 lg:h-12 w-auto rounded-lg"
+          width="48"
+          height="48"
+        />
+        <span class="hidden sm:block font-heading font-semibold text-[#6B1F2E] text-sm lg:text-base leading-tight max-w-[160px]">
+          Centrul de Pregătire<br />
+          <span class="text-[#2C6E7F]">Constanța</span>
+        </span>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="hidden lg:flex items-center gap-1" aria-label="Navigație principală">
+        {navLinks.map((link) =>
+          link.dropdown ? (
+            <div class="dropdown relative">
+              <button
+                class={`flex items-center gap-1 px-3 py-2 rounded-lg text-sm font-medium transition-colors duration-200 ${
+                  link.dropdown.some((d) => d.href === currentPath)
+                    ? 'text-[#6B1F2E] bg-[#E8B4BC]/30'
+                    : 'text-[#2A1518] hover:text-[#6B1F2E] hover:bg-[#E8B4BC]/20'
+                }`}
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                {link.label}
+                <svg class="w-4 h-4 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              <div class="dropdown-menu absolute top-full left-0 mt-1 w-64 bg-white rounded-xl shadow-xl border border-[#E8DDD0] py-2 z-50">
+                {link.dropdown.map((item) => (
+                  <a
+                    href={item.href}
+                    class={`block px-4 py-2.5 text-sm transition-colors duration-150 ${
+                      currentPath === item.href
+                        ? 'text-[#6B1F2E] bg-[#FAF3E7] font-medium'
+                        : 'text-[#2A1518] hover:text-[#6B1F2E] hover:bg-[#FAF3E7]'
+                    }`}
+                  >
+                    {item.label}
+                  </a>
+                ))}
+              </div>
+            </div>
+          ) : (
+            <a
+              href={link.href}
+              class={`px-3 py-2 rounded-lg text-sm font-medium transition-colors duration-200 ${
+                currentPath === link.href
+                  ? 'text-[#6B1F2E] bg-[#E8B4BC]/30'
+                  : 'text-[#2A1518] hover:text-[#6B1F2E] hover:bg-[#E8B4BC]/20'
+              }`}
+            >
+              {link.label}
+            </a>
+          )
+        )}
+      </nav>
+
+      <!-- CTA Button + Mobile Menu -->
+      <div class="flex items-center gap-3">
+        <a
+          href="/servicii#cunostinta"
+          class="hidden sm:inline-flex items-center gap-2 bg-[#6B1F2E] text-white px-4 py-2.5 rounded-lg text-sm font-semibold hover:bg-[#4E1520] transition-colors duration-200 shadow-sm"
+        >
+          <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+          </svg>
+          Ședință gratuită
+        </a>
+
+        <!-- Hamburger -->
+        <button
+          id="mobile-menu-btn"
+          class="lg:hidden flex flex-col gap-1.5 p-2 rounded-lg hover:bg-[#E8B4BC]/20 transition-colors"
+          aria-label="Deschide meniul"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <span class="block w-6 h-0.5 bg-[#2A1518] transition-all duration-300 origin-center" id="ham-top"></span>
+          <span class="block w-6 h-0.5 bg-[#2A1518] transition-all duration-300" id="ham-mid"></span>
+          <span class="block w-6 h-0.5 bg-[#2A1518] transition-all duration-300 origin-center" id="ham-bot"></span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div
+    id="mobile-menu"
+    class="lg:hidden hidden border-t border-[#E8DDD0] bg-[#FAF3E7]"
+    aria-hidden="true"
+  >
+    <div class="max-w-7xl mx-auto px-4 py-4 space-y-1">
+      {navLinks.map((link) =>
+        link.dropdown ? (
+          <div class="mobile-dropdown">
+            <button
+              class="mobile-dropdown-btn w-full flex items-center justify-between px-3 py-2.5 rounded-lg text-[#2A1518] font-medium hover:bg-[#E8B4BC]/20 transition-colors"
+            >
+              {link.label}
+              <svg class="w-4 h-4 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+            <div class="mobile-dropdown-content hidden pl-4 space-y-1 mt-1">
+              {link.dropdown.map((item) => (
+                <a
+                  href={item.href}
+                  class="block px-3 py-2 rounded-lg text-sm text-[#6B5B5E] hover:text-[#6B1F2E] hover:bg-[#E8B4BC]/20 transition-colors"
+                >
+                  {item.label}
+                </a>
+              ))}
+            </div>
+          </div>
+        ) : (
+          <a
+            href={link.href}
+            class={`block px-3 py-2.5 rounded-lg font-medium transition-colors ${
+              currentPath === link.href
+                ? 'text-[#6B1F2E] bg-[#E8B4BC]/30'
+                : 'text-[#2A1518] hover:text-[#6B1F2E] hover:bg-[#E8B4BC]/20'
+            }`}
+          >
+            {link.label}
+          </a>
+        )
+      )}
+      <div class="pt-3 border-t border-[#E8DDD0]">
+        <a
+          href="/servicii#cunostinta"
+          class="block text-center bg-[#6B1F2E] text-white px-4 py-3 rounded-lg font-semibold hover:bg-[#4E1520] transition-colors"
+        >
+          Ședință gratuită
+        </a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- Spacer for fixed header -->
+<div class="h-16 lg:h-20" aria-hidden="true"></div>
+
+<script>
+  // Mobile menu toggle
+  const btn = document.getElementById('mobile-menu-btn');
+  const menu = document.getElementById('mobile-menu');
+  const hamTop = document.getElementById('ham-top');
+  const hamMid = document.getElementById('ham-mid');
+  const hamBot = document.getElementById('ham-bot');
+
+  btn?.addEventListener('click', () => {
+    const isOpen = menu?.classList.contains('hidden') === false;
+    menu?.classList.toggle('hidden');
+    menu?.setAttribute('aria-hidden', isOpen ? 'true' : 'false');
+    btn.setAttribute('aria-expanded', isOpen ? 'false' : 'true');
+
+    // Animate hamburger
+    if (!isOpen) {
+      hamTop?.classList.add('rotate-45', 'translate-y-2');
+      hamMid?.classList.add('opacity-0');
+      hamBot?.classList.add('-rotate-45', '-translate-y-2');
+    } else {
+      hamTop?.classList.remove('rotate-45', 'translate-y-2');
+      hamMid?.classList.remove('opacity-0');
+      hamBot?.classList.remove('-rotate-45', '-translate-y-2');
+    }
+  });
+
+  // Mobile dropdowns
+  document.querySelectorAll('.mobile-dropdown-btn').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const content = btn.nextElementSibling;
+      const arrow = btn.querySelector('svg');
+      content?.classList.toggle('hidden');
+      arrow?.classList.toggle('rotate-180');
+    });
+  });
+
+  // Sticky header shadow
+  window.addEventListener('scroll', () => {
+    const header = document.getElementById('site-header');
+    if (window.scrollY > 10) {
+      header?.classList.add('shadow-md');
+    } else {
+      header?.classList.remove('shadow-md');
+    }
+  });
+</script>

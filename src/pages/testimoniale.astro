@@ -1,0 +1,122 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { testimoniale } from '../lib/data';
+---
+
+<Layout
+  title="Testimoniale"
+  description="Ce spun elevii și părinții despre meditațiile de la Centrul de Pregătire Constanța. Povești reale, rezultate concrete."
+>
+  <!-- Hero -->
+  <section class="py-16 lg:py-20 bg-gradient-to-br from-[#FAF3E7] to-[#F0E4D5]">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h1 class="font-heading text-4xl lg:text-5xl font-bold text-[#6B1F2E] mb-6 reveal">Ce spun cei care au trecut pe la noi</h1>
+      <p class="text-lg text-[#6B5B5E] max-w-2xl mx-auto reveal" style="transition-delay:0.1s">
+        De la «nu înțeleg nimic» la «pot să o fac». Povești din viața reală, fără înfrumusețări.
+      </p>
+    </div>
+  </section>
+
+  <!-- Filtre -->
+  <section class="bg-white border-b border-[#E8DDD0] py-4 sticky top-20 z-30">
+    <div class="max-w-5xl mx-auto px-4 flex flex-wrap gap-2 justify-center">
+      {[
+        { id: 'all', label: 'Toate' },
+        { id: 'elev', label: '🎒 Elevi' },
+        { id: 'parinte', label: '👪 Părinți' },
+        { id: 'recuperare', label: '🔄 Recuperare' },
+      ].map((f) => (
+        <button
+          class="filter-btn px-4 py-2 rounded-full text-sm font-medium border transition-all duration-200"
+          data-filter={f.id}
+        >
+          {f.label}
+        </button>
+      ))}
+    </div>
+  </section>
+
+  <!-- Grid testimoniale -->
+  <section class="py-16 lg:py-24 bg-white">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6" id="testimoniale-grid">
+        {testimoniale.map((t, i) => (
+          <div
+            class="testimonial-card bg-[#FAF3E7] rounded-2xl p-6 lg:p-7 border border-[#E8DDD0] reveal"
+            data-tip={t.tip}
+            style={`transition-delay:${i*0.08}s`}
+          >
+            <div class="flex gap-1 mb-4">
+              {[1,2,3,4,5].map((_) => (
+                <svg class="w-4 h-4 text-[#6B1F2E]" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              ))}
+            </div>
+            <blockquote class="text-[#2A1518] text-sm leading-relaxed mb-5 italic">„{t.citat}"</blockquote>
+            <div class="flex items-center gap-3">
+              <div class="w-12 h-12 bg-[#6B1F2E]/10 rounded-full flex items-center justify-center shrink-0">
+                <span class="text-[#6B1F2E] font-bold">{t.nume.charAt(0)}</span>
+              </div>
+              <div>
+                <p class="font-semibold text-[#2A1518] text-sm">{t.nume}</p>
+                <p class="text-[#6B5B5E] text-xs">{t.rol}</p>
+                <p class="text-[#6B5B5E] text-xs">{t.materie}</p>
+                {t.rezultat && (
+                  <p class="text-[#2C6E7F] text-xs font-medium mt-0.5">✓ {t.rezultat}</p>
+                )}
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-16 bg-gradient-to-br from-[#6B1F2E] to-[#4E1520]">
+    <div class="max-w-3xl mx-auto px-4 text-center reveal">
+      <h2 class="font-heading text-3xl font-bold text-white mb-4">Vrei să fii următorul?</h2>
+      <p class="text-white/75 mb-6">Vino la o ședință gratuită și vedem împreună ce putem face.</p>
+      <a href="/servicii#cunostinta" class="inline-flex items-center gap-2 bg-white text-[#6B1F2E] px-7 py-3.5 rounded-xl font-bold hover:bg-[#FAF3E7] transition-colors shadow-md">
+        Programează ședința gratuită
+      </a>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .filter-btn {
+    background: white;
+    border-color: #E8DDD0;
+    color: #2A1518;
+  }
+  .filter-btn:hover, .filter-btn.active {
+    background: #6B1F2E;
+    border-color: #6B1F2E;
+    color: white;
+  }
+</style>
+
+<script>
+  const filterBtns = document.querySelectorAll('.filter-btn');
+  const cards = document.querySelectorAll('.testimonial-card');
+
+  filterBtns.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const filter = btn.getAttribute('data-filter');
+      filterBtns.forEach((b) => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      cards.forEach((card) => {
+        const tip = card.getAttribute('data-tip');
+        if (filter === 'all' || tip === filter) {
+          (card as HTMLElement).style.display = 'block';
+        } else {
+          (card as HTMLElement).style.display = 'none';
+        }
+      });
+    });
+  });
+
+  // Set "Toate" as default active
+  filterBtns[0]?.classList.add('active');
+</script>

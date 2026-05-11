@@ -1,0 +1,517 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+export function getStaticPaths() {
+  return [
+    { params: { slug: 'romana' } },
+    { params: { slug: 'matematica' } },
+    { params: { slug: 'logica' } },
+    { params: { slug: 'istorie' } },
+    { params: { slug: 'geografie' } },
+    { params: { slug: 'biologie' } },
+  ];
+}
+
+const { slug } = Astro.params;
+
+type MaterieData = {
+  titlu: string;
+  subtitlu: string;
+  icon: string;
+  culoare: string;
+  accentBg: string;
+  descriere: string;
+  areEN: boolean;
+  areBAC: boolean;
+  en?: {
+    intro: string;
+    capitole: string[];
+    cumLucram: string[];
+  };
+  bac: {
+    intro: string;
+    capitole: string[];
+    cumLucram: string[];
+  };
+  recuperare: {
+    intro: string;
+    exemple: string[];
+  };
+};
+
+const materiiData: Record<string, MaterieData> = {
+  romana: {
+    titlu: 'Limba și Literatura Română',
+    subtitlu: 'Crezi că nu ești un om de litere? Hai să te contrazicem.',
+    icon: '📖',
+    culoare: 'text-[#6B1F2E]',
+    accentBg: 'bg-[#6B1F2E]/10',
+    descriere: 'Română nu e despre talent. E despre structură, metode și exercițiu.',
+    areEN: true,
+    areBAC: true,
+    en: {
+      intro: 'La Evaluarea Națională, proba de Română are o structură fixă și predictibilă. Poate fi pregătită sistematic — nu e nevoie să fii "literar" ca să iei o notă bună.',
+      capitole: [
+        'Textul literar — analiză, personaje, teme, procedee artistice',
+        'Textul nonliterar — înțelegere, rezumare, structuri',
+        'Vocabular și morfologie',
+        'Sintaxă și propoziție',
+        'Redactare (rezumatul și textul propriu)',
+      ],
+      cumLucram: [
+        'Înțelegem structura probei și tipurile de cerințe',
+        'Exersăm cu texte din subiecte reale de la EN',
+        'Construim un "vocabular de analiză" pentru texte literare',
+        'Facem simulări complete și analizăm erorile',
+      ],
+    },
+    bac: {
+      intro: 'Bacalaureatul la Română are trei probe bine definite. Eseul argumentativ, analiza textului literar și textul nonliterar — toate se antrenează. Nu câștigă cel mai talentat, ci cel mai pregătit.',
+      capitole: [
+        'Textul argumentativ — structurare, argumente, contra-argumente',
+        'Analiza romanului / nuvelei / poeziei din programa BAC',
+        'Curentele literare (romantism, realism, modernism)',
+        'Gramatică la nivel avansat',
+        'Textul nonliterar — tip I și tip II',
+      ],
+      cumLucram: [
+        'Structurăm eseul argumentativ pas cu pas',
+        'Lucrăm pe operele din programa BAC',
+        'Facem simulări cu subiecte din sesiunile anterioare',
+        'Feedback detaliat pe fiecare eseu scris',
+      ],
+    },
+    recuperare: {
+      intro: 'Ai rămas în urmă la un capitol sau materia ți se pare în general grea? Lucrăm exact pe ce te ține în loc — fără să reinventăm roata.',
+      exemple: [
+        'Nu înțelegi analiza literară și nu știi ce să scrii',
+        'Greșești la morfologie sau sintaxă',
+        'Eseurile tale nu au structură clară',
+        'Te pregătești pentru o lucrare sau teză',
+        'Ai o operă de studiat și nu ai citit-o (nu te judecăm)',
+      ],
+    },
+  },
+  matematica: {
+    titlu: 'Matematică',
+    subtitlu: 'De la «nu înțeleg nimic» la «pot să o fac» — matematica se predă, nu se moștenește.',
+    icon: '🔢',
+    culoare: 'text-[#2C6E7F]',
+    accentBg: 'bg-[#2C6E7F]/10',
+    descriere: 'Nu există talent la matematică — există baze clare sau baze cu goluri.',
+    areEN: true,
+    areBAC: true,
+    en: {
+      intro: 'Matematica la Evaluarea Națională acoperă materia din clasele 5-8. Multe probleme par grele doar pentru că undeva în clasele anterioare a rămas un concept neînțeles care blochează tot restul.',
+      capitole: [
+        'Mulțimi și operații — reale, raționale, iraționale',
+        'Algebră: ecuații, inecuații, sisteme',
+        'Funcții liniare și pătratice',
+        'Geometrie plană: triunghiuri, drepte, cercuri',
+        'Geometrie în spațiu',
+        'Statistică și probabilitate',
+      ],
+      cumLucram: [
+        'Identificăm golurile din clasele anterioare',
+        'Construim bazele înainte de a trece mai departe',
+        'Facem exerciții progresive, de la simplu la complex',
+        'Simulări complete cu subiecte tip EN',
+      ],
+    },
+    bac: {
+      intro: 'BAC-ul la matematică are subiect standard și subiect profil real. Lucrăm pe ambele variante, cu accent pe tipurile de probleme care apar cel mai frecvent.',
+      capitole: [
+        'Algebră: polinoame, ecuații, sisteme',
+        'Analiză: limite, derivate, integrale',
+        'Geometrie: vectori, drepte, plane în spațiu',
+        'Funcții și proprietăți',
+        'Combinatorică și probabilitate (subiect profil)',
+      ],
+      cumLucram: [
+        'Stabilim care variantă de subiect (M1 sau M2)',
+        'Lucrăm sistematic pe fiecare tip de problemă',
+        'Simulări din subiecte reale ale sesiunilor anterioare',
+        'Antrenăm gestionarea timpului în examen',
+      ],
+    },
+    recuperare: {
+      intro: 'Matematica e cumulativă — un concept neînțeles în clasa a 6-a se simte în clasa a 10-a. Găsim gaura și o acoperim.',
+      exemple: [
+        'Fracții și operații (clasa 5-6)',
+        'Ecuații și inecuații',
+        'Funcții (clasa 9-10)',
+        'Geometrie plană sau spațiu',
+        'Un capitol înaintea unei lucrări sau teze',
+      ],
+    },
+  },
+  logica: {
+    titlu: 'Logică, Argumentare și Comunicare',
+    subtitlu: 'Materia de BAC care pare abstractă, dar e mai logică decât crezi.',
+    icon: '🧠',
+    culoare: 'text-[#6B1F2E]',
+    accentBg: 'bg-[#6B1F2E]/10',
+    descriere: 'Logica are structură și reguli clare — nu e filosofie vagă.',
+    areEN: false,
+    areBAC: true,
+    bac: {
+      intro: 'Logica la BAC sperie mulți elevi pentru că nu știu ce să aștepte. Dar subiectul are o structură fixă, cu tipuri de cerințe care se repetă. Poate fi pregătită sistematic.',
+      capitole: [
+        'Propoziții logice și conectori',
+        'Raționamente deductive și inductive',
+        'Argumentare și contraargumentare',
+        'Definiție și clasificare',
+        'Erori logice',
+        'Comunicare și discurs argumentativ',
+      ],
+      cumLucram: [
+        'Înțelegem structura probei de la zero',
+        'Exersăm recunoașterea tipurilor de raționament',
+        'Construim argumente structurate',
+        'Simulări cu subiecte din sesiunile anterioare',
+      ],
+    },
+    recuperare: {
+      intro: 'Logica e de obicei materie de liceu (clasa a 9-a sau a 10-a). Dacă ai rămas în urmă sau nu ai prins-o la timp, o luăm de la capăt.',
+      exemple: [
+        'Nu înțelegi noțiunile de bază (propoziție, predicat logic)',
+        'Confunzi tipurile de raționamente',
+        'Nu știi cum se structurează un argument',
+        'Te pregătești pentru o teză sau examen',
+      ],
+    },
+  },
+  istorie: {
+    titlu: 'Istorie',
+    subtitlu: 'Istoria nu e o listă de date de memorat — e o poveste care face sens.',
+    icon: '🏛️',
+    culoare: 'text-[#2C6E7F]',
+    accentBg: 'bg-[#2C6E7F]/10',
+    descriere: 'Facem istoria logică, nu o înșiruire de ani și bătălii.',
+    areEN: false,
+    areBAC: true,
+    bac: {
+      intro: 'BAC-ul la Istorie are cerințe de analiză, sinteză și eseu. Nu se câștigă prin memorare brută, ci prin înțelegerea cauzelor, efectelor și relațiilor dintre evenimente.',
+      capitole: [
+        'Istoria românilor: de la origini la contemporaneitate',
+        'Istoria universală: marile perioade și evenimente',
+        'Documente istorice — analiză și interpretare',
+        'Eseul structurat de Istorie',
+        'Cronologie și periodizare',
+      ],
+      cumLucram: [
+        'Construim o hartă mentală a perioadelor istorice',
+        'Lucrăm pe tipurile de cerințe din subiect',
+        'Antrenăm scrierea eseului structurat',
+        'Folosim tehnici de organizare a informației (nu tocit pe de rost)',
+      ],
+    },
+    recuperare: {
+      intro: 'Ai o perioadă anume care nu ți-a intrat, sau materia în general ți se pare confuză? Lucrăm exact pe ce ai nevoie.',
+      exemple: [
+        'Un capitol din programa școlară care te blochează',
+        'Înțelegerea documentelor istorice',
+        'Cum să scrii un eseu de Istorie',
+        'Pregătire pentru o lucrare sau teză',
+      ],
+    },
+  },
+  geografie: {
+    titlu: 'Geografie',
+    subtitlu: 'Hărțile nu sunt obligatoriu confuze — poate n-ai avut pe cineva care să le explice bine.',
+    icon: '🗺️',
+    culoare: 'text-[#6B1F2E]',
+    accentBg: 'bg-[#6B1F2E]/10',
+    descriere: 'Geografie fizică, umană și economică — cu hărți și exemple reale.',
+    areEN: false,
+    areBAC: true,
+    bac: {
+      intro: 'BAC-ul la Geografie acoperă geografia fizică a României și a lumii, geografie umană și economică. Subiectul are cerințe de analiză a hărților, completare de legende și redactare.',
+      capitole: [
+        'Geografie fizică: relief, climă, ape, vegetație',
+        'Geografie umană: populație, așezări, migrație',
+        'Geografie economică: industrie, agricultură, transporturi',
+        'România în context european și mondial',
+        'Lucrul cu hărți și diagrame',
+      ],
+      cumLucram: [
+        'Înțelegem relațiile cauză-efect în geografie (nu memorare)',
+        'Lucrăm cu hărți și grafice din subiecte reale',
+        'Antrenăm răspunsurile la cerințele specifice BAC',
+        'Simulări complete',
+      ],
+    },
+    recuperare: {
+      intro: 'Geografie e materie grea de memorat dacă nu faci conexiunile. Facem conexiunile împreună.',
+      exemple: [
+        'Geografie fizică a României',
+        'Clima și factorii climatici',
+        'Lucrul cu hărți (nu știi ce să citești de pe ele)',
+        'Pregătire pentru o lucrare sau teză',
+      ],
+    },
+  },
+  biologie: {
+    titlu: 'Biologie',
+    subtitlu: 'Celule, genetică, anatomie — toate pot să facă sens, nu doar să fie de memorat.',
+    icon: '🌿',
+    culoare: 'text-[#2C6E7F]',
+    accentBg: 'bg-[#2C6E7F]/10',
+    descriere: 'Biologia înțeleasă, nu memorată — e mai eficient și rămâne mult mai mult.',
+    areEN: false,
+    areBAC: true,
+    bac: {
+      intro: 'BAC-ul la Biologie (vegetală și animală sau anatomie) cere înțelegerea proceselor, nu doar memorarea denumirilor. Lucrăm pe structura probei și pe tipurile de cerințe.',
+      capitole: [
+        'Biologie vegetală: celulă, nutriție, reproducere',
+        'Biologie animală: sisteme și organe',
+        'Anatomia și fiziologia omului',
+        'Genetică: ADN, cromozomi, ereditate',
+        'Ecologie',
+      ],
+      cumLucram: [
+        'Înțelegem procesele biologice (nu le memorăm)',
+        'Lucrăm cu scheme și desene explicative',
+        'Antrenăm răspunsurile la cerințele de BAC',
+        'Simulări cu subiecte din sesiunile anterioare',
+      ],
+    },
+    recuperare: {
+      intro: 'Ai un capitol de biologie care nu a intrat sau te pregătești pentru o lucrare? Lucrăm pe exact ce ai nevoie.',
+      exemple: [
+        'Celula și structura ei',
+        'Fotosinteza și respirația celulară',
+        'Sistemele corpului uman',
+        'Genetică (unul din cele mai dificile capitole)',
+        'Pregătire pentru o teză sau examen parțial',
+      ],
+    },
+  },
+};
+
+const materie = materiiData[slug];
+
+if (!materie) {
+  return Astro.redirect('/materii');
+}
+---
+
+<Layout
+  title={materie.titlu}
+  description={`Meditații la ${materie.titlu} în Constanța. ${materie.descriere} Pregătire EN, BAC și recuperare. Ședință de cunoaștere gratuită.`}
+>
+  <!-- Hero -->
+  <section class="py-16 lg:py-20 bg-gradient-to-br from-[#FAF3E7] to-[#F0E4D5]">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div class={`inline-flex w-16 h-16 ${materie.accentBg} rounded-2xl items-center justify-center text-4xl mb-6 reveal`}>
+        {materie.icon}
+      </div>
+      <h1 class={`font-heading text-3xl lg:text-5xl font-bold ${materie.culoare} mb-4 reveal`} style="transition-delay:0.1s">
+        {materie.titlu}
+      </h1>
+      <p class="text-lg text-[#6B5B5E] max-w-2xl mx-auto reveal" style="transition-delay:0.2s">
+        {materie.subtitlu}
+      </p>
+    </div>
+  </section>
+
+  <!-- Tabs content -->
+  <section class="py-16 lg:py-24 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <!-- Tab buttons -->
+      <div class="flex flex-wrap gap-2 mb-10 reveal" id="tab-buttons">
+        {materie.areEN && (
+          <button
+            class="tab-btn px-5 py-2.5 rounded-xl text-sm font-semibold border-2 transition-all duration-200 active-tab"
+            data-tab="en"
+          >
+            🎯 Evaluare Națională
+          </button>
+        )}
+        <button
+          class={`tab-btn px-5 py-2.5 rounded-xl text-sm font-semibold border-2 transition-all duration-200 ${!materie.areEN ? 'active-tab' : ''}`}
+          data-tab="bac"
+        >
+          📚 Bacalaureat
+        </button>
+        <button
+          class="tab-btn px-5 py-2.5 rounded-xl text-sm font-semibold border-2 transition-all duration-200"
+          data-tab="recuperare"
+        >
+          🔄 Recuperare la materie
+        </button>
+      </div>
+
+      <!-- Tab: EN -->
+      {materie.areEN && materie.en && (
+        <div id="tab-en" class="tab-content">
+          <h2 class="font-heading text-2xl font-bold text-[#2A1518] mb-4">Evaluare Națională (clasa a 8-a)</h2>
+          <p class="text-[#6B5B5E] leading-relaxed mb-8">{materie.en.intro}</p>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
+              <h3 class="font-heading text-lg font-bold text-[#2A1518] mb-4">Ce acoperim</h3>
+              <ul class="space-y-2">
+                {materie.en.capitole.map((cap) => (
+                  <li class="flex items-start gap-2 text-[#2A1518] text-sm">
+                    <svg class="w-4 h-4 text-[#6B1F2E] mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                    {cap}
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div>
+              <h3 class="font-heading text-lg font-bold text-[#2A1518] mb-4">Cum lucrăm</h3>
+              <ul class="space-y-2">
+                {materie.en.cumLucram.map((pas) => (
+                  <li class="flex items-start gap-2 text-[#2A1518] text-sm">
+                    <svg class="w-4 h-4 text-[#2C6E7F] mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                    {pas}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+      )}
+
+      <!-- Tab: BAC -->
+      <div id="tab-bac" class={`tab-content ${materie.areEN ? 'hidden' : ''}`}>
+        <h2 class="font-heading text-2xl font-bold text-[#2A1518] mb-4">Bacalaureat (clasa a 12-a)</h2>
+        <p class="text-[#6B5B5E] leading-relaxed mb-8">{materie.bac.intro}</p>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div>
+            <h3 class="font-heading text-lg font-bold text-[#2A1518] mb-4">Ce acoperim</h3>
+            <ul class="space-y-2">
+              {materie.bac.capitole.map((cap) => (
+                <li class="flex items-start gap-2 text-[#2A1518] text-sm">
+                  <svg class="w-4 h-4 text-[#6B1F2E] mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                  {cap}
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div>
+            <h3 class="font-heading text-lg font-bold text-[#2A1518] mb-4">Cum lucrăm</h3>
+            <ul class="space-y-2">
+              {materie.bac.cumLucram.map((pas) => (
+                <li class="flex items-start gap-2 text-[#2A1518] text-sm">
+                  <svg class="w-4 h-4 text-[#2C6E7F] mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                  {pas}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tab: Recuperare -->
+      <div id="tab-recuperare" class="tab-content hidden">
+        <h2 class="font-heading text-2xl font-bold text-[#2A1518] mb-4">Recuperare la materie (orice clasă)</h2>
+        <p class="text-[#6B5B5E] leading-relaxed mb-8">{materie.recuperare.intro}</p>
+        <div class="bg-[#FAF3E7] rounded-2xl p-6 border border-[#E8DDD0]">
+          <h3 class="font-heading text-lg font-bold text-[#2A1518] mb-4">Exemple frecvente</h3>
+          <ul class="space-y-3">
+            {materie.recuperare.exemple.map((ex) => (
+              <li class="flex items-start gap-2 text-[#2A1518] text-sm">
+                <svg class="w-4 h-4 text-[#6B1F2E] mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                {ex}
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div class="mt-6 p-5 bg-[#2C6E7F]/5 border border-[#2C6E7F]/20 rounded-2xl">
+          <p class="text-[#2A1518] text-sm leading-relaxed">
+            <strong class="text-[#2C6E7F]">Fără minim de ședințe.</strong> Vii pentru câte ședințe ai nevoie — 1, 5 sau 20. Nu există abonament sau angajament. Lucrăm exact pe ce te ține în loc.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Prețuri -->
+  <section class="py-12 bg-[#FAF3E7]">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="font-heading text-2xl font-bold text-[#2A1518] mb-6 text-center reveal">Prețuri</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div class="bg-white rounded-xl p-5 border border-[#E8DDD0] text-center reveal">
+          <p class="text-[#6B5B5E] text-sm mb-1">Ședință individuală</p>
+          <p class="font-heading text-3xl font-bold text-[#6B1F2E]">100 <span class="text-lg text-[#6B5B5E]">lei</span></p>
+          <p class="text-[#6B5B5E] text-xs mt-1">1h 45min · online sau sediu</p>
+        </div>
+        <div class="bg-[#6B1F2E] rounded-xl p-5 text-center relative reveal" style="transition-delay:0.1s">
+          <span class="absolute -top-2 left-1/2 -translate-x-1/2 bg-[#E8B4BC] text-[#6B1F2E] text-xs font-bold px-3 py-0.5 rounded-full">Recomandat</span>
+          <p class="text-white/70 text-sm mb-1">Pachet intensiv</p>
+          <p class="font-heading text-3xl font-bold text-white">250 <span class="text-lg text-white/70">lei</span></p>
+          <p class="text-white/60 text-xs mt-1">3 ședințe / săptămână</p>
+        </div>
+        <div class="bg-white rounded-xl p-5 border border-green-200 text-center reveal" style="transition-delay:0.2s">
+          <p class="text-green-600 text-sm mb-1">Ședință de cunoaștere</p>
+          <p class="font-heading text-3xl font-bold text-green-600">Gratuit</p>
+          <p class="text-[#6B5B5E] text-xs mt-1">Test inițial · fără obligații</p>
+        </div>
+      </div>
+      <div class="text-center mt-6">
+        <a href="/preturi" class="text-[#6B1F2E] font-semibold text-sm hover:underline">
+          Vezi toate detaliile despre prețuri →
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-12 bg-gradient-to-br from-[#6B1F2E] to-[#4E1520]">
+    <div class="max-w-3xl mx-auto px-4 text-center reveal">
+      <h2 class="font-heading text-2xl font-bold text-white mb-3">Vrei să începem?</h2>
+      <p class="text-white/75 mb-6">Programează ședința de cunoaștere gratuită și vedem împreună de unde plecăm.</p>
+      <div class="flex flex-col sm:flex-row gap-3 justify-center">
+        <a href="/contact" class="inline-flex items-center justify-center gap-2 bg-white text-[#6B1F2E] px-6 py-3 rounded-xl font-bold hover:bg-[#FAF3E7] transition-colors">
+          Programează gratuit
+        </a>
+        <a href="https://wa.me/40721628936" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 bg-[#25D366] text-white px-6 py-3 rounded-xl font-bold hover:bg-[#1da851] transition-colors">
+          WhatsApp
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .active-tab {
+    background-color: #6B1F2E;
+    border-color: #6B1F2E;
+    color: white;
+  }
+  .tab-btn:not(.active-tab) {
+    background-color: white;
+    border-color: #E8DDD0;
+    color: #2A1518;
+  }
+  .tab-btn:not(.active-tab):hover {
+    border-color: #6B1F2E;
+    color: #6B1F2E;
+  }
+</style>
+
+<script>
+  const tabBtns = document.querySelectorAll('.tab-btn');
+  const tabContents = document.querySelectorAll('.tab-content');
+
+  tabBtns.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const target = btn.getAttribute('data-tab');
+
+      tabBtns.forEach((b) => b.classList.remove('active-tab'));
+      btn.classList.add('active-tab');
+
+      tabContents.forEach((content) => {
+        const id = content.id.replace('tab-', '');
+        if (id === target) {
+          content.classList.remove('hidden');
+        } else {
+          content.classList.add('hidden');
+        }
+      });
+    });
+  });
+</script>
