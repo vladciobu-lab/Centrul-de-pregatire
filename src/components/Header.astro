@@ -37,7 +37,7 @@ const currentPath = Astro.url.pathname;
       <!-- Logo -->
       <a href="/" class="flex items-center gap-3 shrink-0" aria-label="Centrul de Pregătire Constanța - Acasă">
         <img
-          src="/logo.jpeg"
+          src={`${import.meta.env.BASE_URL}logo.jpeg`}
           alt="Centrul de Pregătire Constanța"
           class="h-10 lg:h-12 w-auto rounded-lg"
           width="48"
