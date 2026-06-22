@@ -193,7 +193,7 @@ function Footer() {
           <div>
             <div className="flex items-center gap-3 mb-4">
               <span className="w-14 h-14 flex-shrink-0" style={{ filter: 'brightness(0) invert(1)' }}>
-                <img src="assets/logo.webp" alt="" className="w-full h-full object-contain" />
+                <img src="assets/logo-emblem.webp" alt="" className="w-full h-full object-contain" />
               </span>
               <div>
                 <div className="serif-h text-cream text-lg">Centrul de Pregătire</div>

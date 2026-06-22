@@ -322,7 +322,7 @@ function Footer() {
       filter: 'brightness(0) invert(1)'
     }
   }, /*#__PURE__*/React.createElement("img", {
-    src: "assets/logo.webp",
+    src: "assets/logo-emblem.webp",
     alt: "",
     className: "w-full h-full object-contain"
   })), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
