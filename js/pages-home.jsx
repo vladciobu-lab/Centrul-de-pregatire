@@ -136,6 +136,20 @@ function HeroBold() {
 }
 
 function VideoPrezentare() {
+  return (
+    <div className="relative w-full rounded-2xl md:rounded-3xl overflow-hidden shadow-card bg-bordo-deep" style={{ aspectRatio: '9 / 16' }}>
+      <iframe
+        className="absolute inset-0 w-full h-full border-0"
+        src="https://www.youtube.com/embed/jwFqOM7dfCY?rel=0&modestbranding=1"
+        title="Prezentare Centrul de Pregătire Constanța"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowFullScreen
+      ></iframe>
+    </div>
+  );
+}
+
+function _VideoPrezentareOLD_UNUSED() {
   const videoRef = React.useRef(null);
   const [playing, setPlaying] = React.useState(false);
 
