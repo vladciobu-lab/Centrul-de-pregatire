@@ -66,44 +66,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Source+Sans+3:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
 
-<script src="https://cdn.tailwindcss.com"></script>
-<script>
-  tailwind.config = {
-    theme: {
-      extend: {
-        colors: {
-          bordo:   { DEFAULT: '#0A5360', deep: '#063944', soft: '#14708A' },
-          teal:    { DEFAULT: '#2C6E7F', deep: '#1E5260', soft: '#4A8B9C' },
-          cream:   { DEFAULT: '#FFFFFF', warm: '#FFFFFF', deep: '#F1ECE3' },
-          rose:    { DEFAULT: '#E8B4BC', soft: '#F2D2D7' },
-          ink:     { DEFAULT: '#241013', muted: '#574749', light: '#7A696C' }
-        },
-        fontFamily: {
-          serif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
-          sans:  ['"Source Sans 3"', 'system-ui', 'sans-serif'],
-          mono:  ['"JetBrains Mono"', 'monospace']
-        },
-        boxShadow: {
-          card: '0 1px 2px rgba(42,21,24,0.04), 0 8px 24px -8px rgba(42,21,24,0.08)',
-          'card-hover': '0 2px 4px rgba(42,21,24,0.06), 0 16px 40px -12px rgba(107,31,46,0.18)',
-          'soft': '0 1px 2px rgba(42,21,24,0.03), 0 4px 12px -4px rgba(42,21,24,0.06)',
-        },
-        animation: {
-          'fade-up': 'fadeUp 0.7s ease-out both',
-          'fade-in': 'fadeIn 0.6s ease-out both',
-          'pulse-ring': 'pulseRing 2.2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-          'float': 'float 6s ease-in-out infinite',
-        },
-        keyframes: {
-          fadeUp:   { '0%': { opacity: 0, transform: 'translateY(16px)' }, '100%': { opacity: 1, transform: 'translateY(0)' } },
-          fadeIn:   { '0%': { opacity: 0 }, '100%': { opacity: 1 } },
-          pulseRing:{ '0%': { transform: 'scale(0.95)', opacity: 0.7 }, '100%': { transform: 'scale(1.4)', opacity: 0 } },
-          float:    { '0%,100%': { transform: 'translateY(0)' }, '50%': { transform: 'translateY(-6px)' } },
-        }
-      }
-    }
-  };
-</script>
+<link rel="stylesheet" href="dist/tailwind.css" />
 
 <style>
   html { font-size: 112.5%; scroll-behavior: smooth; }
@@ -196,28 +159,24 @@
   html[data-text="darker"] p, html[data-text="darker"] li { font-weight: 450; }
 
   .logo-mask { mix-blend-mode: multiply; }
+
+  @keyframes fadeUp { 0% { opacity: 0; transform: translateY(16px); } 100% { opacity: 1; transform: translateY(0); } }
+  @keyframes fadeIn { 0% { opacity: 0; } 100% { opacity: 1; } }
+  @keyframes pulseRing { 0% { transform: scale(0.95); opacity: 0.7; } 100% { transform: scale(1.4); opacity: 0; } }
+  @keyframes float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-6px); } }
+  .animate-fade-up { animation: fadeUp 0.7s ease-out both; }
+  .animate-fade-in { animation: fadeIn 0.6s ease-out both; }
+  .animate-float { animation: float 6s ease-in-out infinite; }
 </style>
 </head>
 <body class="text-ink">
 
 <div id="root"></div>
 
-<!-- React + Babel -->
-<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
-<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
-<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react@18.3.1/umd/react.production.min.js" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js" crossorigin="anonymous"></script>
 <script src="image-slot.js"></script>
-
-<!-- App scripts (split into manageable files) -->
-<script type="text/babel" data-presets="react" src="js/data.jsx"></script>
-<script type="text/babel" data-presets="react" src="js/components.jsx"></script>
-<script type="text/babel" data-presets="react" src="js/pages-home.jsx"></script>
-<script type="text/babel" data-presets="react" src="js/pages-about-services.jsx"></script>
-<script type="text/babel" data-presets="react" src="js/pages-subjects.jsx"></script>
-<script type="text/babel" data-presets="react" src="js/pages-prices-testimonials.jsx"></script>
-<script type="text/babel" data-presets="react" src="js/pages-blog.jsx"></script>
-<script type="text/babel" data-presets="react" src="js/pages-contact-privacy.jsx"></script>
-<script type="text/babel" data-presets="react" src="js/app.jsx"></script>
+<script src="dist/bundle.js"></script>
 
 </body>
 </html>
