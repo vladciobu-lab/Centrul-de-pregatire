@@ -1755,7 +1755,7 @@ function SediuCarousel() {
     src: 'assets/sediu-1.webp',
     alt: 'Sala de meditaÈ›ii cu masÄƒ È™i scaune'
   }, {
-    src: 'assets/sediu-2.jpeg',
+    src: 'assets/sediu-2.webp',
     alt: 'Sala de studiu cu luminÄƒ naturalÄƒ'
   }, {
     src: 'assets/sediu-3.jpeg',

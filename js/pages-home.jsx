@@ -199,7 +199,7 @@ function _VideoPrezentareOLD_UNUSED() {
 function SediuCarousel() {
   const IMAGES = [
     { src: 'assets/sediu-1.webp', alt: 'Sala de meditații cu masă și scaune' },
-    { src: 'assets/sediu-2.jpeg', alt: 'Sala de studiu cu lumină naturală' },
+    { src: 'assets/sediu-2.webp', alt: 'Sala de studiu cu lumină naturală' },
     { src: 'assets/sediu-3.jpeg', alt: 'Holul și intrarea în săli' },
   ];
   const [i, setI] = React.useState(0);
