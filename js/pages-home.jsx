@@ -90,7 +90,7 @@ function HeroSplit() {
           </div>
           <div className="lg:col-span-5 relative">
             <div className="aspect-square relative flex items-center justify-center">
-              <img src="assets/logo.png" alt="" className="relative w-[92%] object-contain animate-float" />
+              <img src="assets/logo.webp" alt="" className="relative w-[92%] object-contain animate-float" />
             </div>
             <div className="absolute -bottom-6 -left-6 bg-bordo-deep text-cream rounded-2xl p-5 shadow-card-hover max-w-[220px] hidden md:block">
               <div className="serif-h text-3xl text-rose mb-1">0 lei</div>
@@ -113,7 +113,7 @@ function HeroBold() {
       <div className="absolute inset-0 opacity-10" style={{backgroundImage:'radial-gradient(circle at 1px 1px, #FAF3E7 1px, transparent 0)', backgroundSize:'24px 24px'}}></div>
       <div className="relative max-w-6xl mx-auto px-4 md:px-6 lg:px-10 pt-16 md:pt-24 pb-16 md:pb-28">
         <div className="flex items-center gap-4 mb-10">
-          <span className="w-16 h-16 flex-shrink-0" style={{ filter: 'brightness(0) invert(1)' }}><img src="assets/logo.png" alt="" className="w-full h-full object-contain" /></span>
+          <span className="w-16 h-16 flex-shrink-0" style={{ filter: 'brightness(0) invert(1)' }}><img src="assets/logo.webp" alt="" className="w-full h-full object-contain" /></span>
           <div className="flourish text-rose text-xs uppercase tracking-[0.3em] font-medium" style={{justifyContent:'flex-start'}}>Meditații · Constanța</div>
         </div>
 

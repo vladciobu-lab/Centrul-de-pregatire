@@ -86,7 +86,7 @@ function Logo({ size = 'md', linked = true }) {
   const inner = (
     <span className="flex items-center gap-2.5">
       <span className={`${sizes[size]} relative flex-shrink-0 block`}>
-        <img src="assets/logo-emblem.png" alt="Centrul de Pregătire Constanța" className="absolute inset-0 w-full h-full object-contain" />
+        <img src="assets/logo-emblem.webp" alt="Centrul de Pregătire Constanța" className="absolute inset-0 w-full h-full object-contain" />
       </span>
       <span className="flex flex-col leading-none">
         <span className={`serif-h ${txt[size]} text-bordo-deep leading-[1.05] whitespace-nowrap`}>Centrul de Pregătire</span>
@@ -193,7 +193,7 @@ function Footer() {
           <div>
             <div className="flex items-center gap-3 mb-4">
               <span className="w-14 h-14 flex-shrink-0" style={{ filter: 'brightness(0) invert(1)' }}>
-                <img src="assets/logo.png" alt="" className="w-full h-full object-contain" />
+                <img src="assets/logo.webp" alt="" className="w-full h-full object-contain" />
               </span>
               <div>
                 <div className="serif-h text-cream text-lg">Centrul de Pregătire</div>

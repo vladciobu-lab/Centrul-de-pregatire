@@ -605,7 +605,7 @@ function Logo({
   }, /*#__PURE__*/React.createElement("span", {
     className: `${sizes[size]} relative flex-shrink-0 block`
   }, /*#__PURE__*/React.createElement("img", {
-    src: "assets/logo-emblem.png",
+    src: "assets/logo-emblem.webp",
     alt: "Centrul de Pregătire Constanța",
     className: "absolute inset-0 w-full h-full object-contain"
   })), /*#__PURE__*/React.createElement("span", {
@@ -769,7 +769,7 @@ function Footer() {
       filter: 'brightness(0) invert(1)'
     }
   }, /*#__PURE__*/React.createElement("img", {
-    src: "assets/logo.png",
+    src: "assets/logo.webp",
     alt: "",
     className: "w-full h-full object-contain"
   })), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
@@ -1386,7 +1386,7 @@ function HeroSplit() {
   }, /*#__PURE__*/React.createElement("div", {
     className: "aspect-square relative flex items-center justify-center"
   }, /*#__PURE__*/React.createElement("img", {
-    src: "assets/logo.png",
+    src: "assets/logo.webp",
     alt: "",
     className: "relative w-[92%] object-contain animate-float"
   })), /*#__PURE__*/React.createElement("div", {
@@ -1422,7 +1422,7 @@ function HeroBold() {
       filter: 'brightness(0) invert(1)'
     }
   }, /*#__PURE__*/React.createElement("img", {
-    src: "assets/logo.png",
+    src: "assets/logo.webp",
     alt: "",
     className: "w-full h-full object-contain"
   })), /*#__PURE__*/React.createElement("div", {
