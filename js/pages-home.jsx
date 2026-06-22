@@ -499,9 +499,6 @@ function HomePage({ heroVariant }) {
               </Reveal>
             );})}
           </div>
-          <div className="text-center mt-12">
-            <Button href="preturi" variant="primary" size="lg">Vezi toate prețurile →</Button>
-          </div>
         </div>
       </section>
 

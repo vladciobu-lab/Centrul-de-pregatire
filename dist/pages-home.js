@@ -740,13 +740,7 @@ function HomePage({
       name: "badge",
       className: "w-4 h-4"
     })), /*#__PURE__*/React.createElement("span", null, b))))));
-  })), /*#__PURE__*/React.createElement("div", {
-    className: "text-center mt-12"
-  }, /*#__PURE__*/React.createElement(Button, {
-    href: "preturi",
-    variant: "primary",
-    size: "lg"
-  }, "Vezi toate prețurile →")))), /*#__PURE__*/React.createElement("section", {
+  })))), /*#__PURE__*/React.createElement("section", {
     className: "py-20 md:py-28 px-4 md:px-6 lg:px-10"
   }, /*#__PURE__*/React.createElement("div", {
     className: "max-w-7xl mx-auto"
