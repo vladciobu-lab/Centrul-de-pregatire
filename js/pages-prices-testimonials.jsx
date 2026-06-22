@@ -10,14 +10,6 @@ function PricesPage() {
           {window.PRICES.map(p => <PriceCard key={p.id} p={p} />)}
         </div>
 
-        <div className="mt-12 max-w-4xl mx-auto bg-white rounded-2xl p-7 md:p-9 shadow-soft border-l-4 border-teal">
-          <div className="text-xs uppercase tracking-wider text-teal font-semibold mb-3">Mențiune importantă</div>
-          <h3 className="serif-h text-2xl md:text-3xl text-bordo-deep mb-3">Nu suntem obligați să facem abonament.</h3>
-          <p className="text-[16px] leading-relaxed text-ink">
-            Poți veni pentru <strong>1 ședință</strong>, pentru <strong>3 ședințe</strong>, sau pentru <strong>tot anul</strong>. <span className="text-bordo-deep font-semibold">Tu decizi.</span> Fără minim, fără penalități, fără „pachete" inflexibile. Plătești pe ce faci, atât.
-          </p>
-        </div>
-
       </section>
     </>
   );

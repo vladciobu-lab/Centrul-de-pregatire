@@ -19,17 +19,7 @@ function PricesPage() {
   }, window.PRICES.map(p => /*#__PURE__*/React.createElement(PriceCard, {
     key: p.id,
     p: p
-  }))), /*#__PURE__*/React.createElement("div", {
-    className: "mt-12 max-w-4xl mx-auto bg-white rounded-2xl p-7 md:p-9 shadow-soft border-l-4 border-teal"
-  }, /*#__PURE__*/React.createElement("div", {
-    className: "text-xs uppercase tracking-wider text-teal font-semibold mb-3"
-  }, "Mențiune importantă"), /*#__PURE__*/React.createElement("h3", {
-    className: "serif-h text-2xl md:text-3xl text-bordo-deep mb-3"
-  }, "Nu suntem obligați să facem abonament."), /*#__PURE__*/React.createElement("p", {
-    className: "text-[16px] leading-relaxed text-ink"
-  }, "Poți veni pentru ", /*#__PURE__*/React.createElement("strong", null, "1 ședință"), ", pentru ", /*#__PURE__*/React.createElement("strong", null, "3 ședințe"), ", sau pentru ", /*#__PURE__*/React.createElement("strong", null, "tot anul"), ". ", /*#__PURE__*/React.createElement("span", {
-    className: "text-bordo-deep font-semibold"
-  }, "Tu decizi."), " Fără minim, fără penalități, fără „pachete\" inflexibile. Plătești pe ce faci, atât."))));
+  })))));
 }
 function TestimonialsPage() {
   const [filter, setFilter] = useState('toate');
