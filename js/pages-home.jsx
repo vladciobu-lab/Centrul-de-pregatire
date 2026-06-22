@@ -49,7 +49,7 @@ function HeroEditorial() {
           </div>
           <div className="lg:col-span-6">
             <div className="relative w-full max-w-md mx-auto lg:max-w-none" style={{ aspectRatio: '4 / 5' }}>
-              <img src="assets/hero-main.webp" alt="Sesiune de meditatii la Centrul de Pregatire Constanta" className="absolute inset-0 w-full h-full object-cover rounded-3xl" />
+              <img src="assets/hero-main.webp" alt="Sesiune de meditații la Centrul de Pregătire Constanța" className="absolute inset-0 w-full h-full object-cover rounded-3xl" fetchpriority="high" />
               <div className="absolute -bottom-5 -left-3 md:-left-6 bg-white rounded-2xl px-5 py-4 shadow-card-hover flex items-center gap-3 max-w-[260px]">
                 <span className="w-10 h-10 rounded-full bg-bordo/10 flex items-center justify-center text-bordo flex-shrink-0">
                   <Ic name="compass" className="w-5 h-5" />
@@ -136,15 +136,38 @@ function HeroBold() {
 }
 
 function VideoPrezentare() {
+  const [loaded, setLoaded] = React.useState(false);
+  const id = 'jwFqOM7dfCY';
   return (
     <div className="relative w-full rounded-2xl md:rounded-3xl overflow-hidden shadow-card bg-bordo-deep" style={{ aspectRatio: '9 / 16' }}>
-      <iframe
-        className="absolute inset-0 w-full h-full border-0"
-        src="https://www.youtube.com/embed/jwFqOM7dfCY?rel=0&modestbranding=1"
-        title="Prezentare Centrul de Pregătire Constanța"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowFullScreen
-      ></iframe>
+      {loaded ? (
+        <iframe
+          className="absolute inset-0 w-full h-full border-0"
+          src={'https://www.youtube.com/embed/' + id + '?rel=0&modestbranding=1&autoplay=1'}
+          title="Prezentare Centrul de Pregătire Constanța"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+        />
+      ) : (
+        <button
+          type="button"
+          className="absolute inset-0 w-full h-full flex items-center justify-center group bg-bordo-deep/10"
+          onClick={() => setLoaded(true)}
+          aria-label="Redă videoclipul de prezentare"
+        >
+          <img
+            src={'https://i.ytimg.com/vi/' + id + '/hqdefault.jpg'}
+            alt="Prezentare Centrul de Pregătire Constanța"
+            className="absolute inset-0 w-full h-full object-cover"
+            loading="lazy"
+          />
+          <span className="relative z-10 w-16 h-16 rounded-full bg-white/95 text-bordo-deep flex items-center justify-center shadow-lg transition-transform group-hover:scale-110 group-active:scale-95">
+            <svg viewBox="0 0 24 24" fill="currentColor" className="w-7 h-7 ml-1" aria-hidden="true">
+              <path d="M8 5.14v13.72a1 1 0 001.54.84l10.5-6.86a1 1 0 000-1.68L9.54 4.3A1 1 0 008 5.14z"/>
+            </svg>
+          </span>
+        </button>
+      )}
     </div>
   );
 }
@@ -236,7 +259,7 @@ function SediuCarousel() {
                   borderRadius: 28,
                   transform: transformFor(rel),
                   transformStyle: 'preserve-3d',
-                  transition: 'transform 0.75s cubic-bezier(0.65,0,0.35,1), box-shadow 0.6s ease, filter 0.6s ease',
+                  transition: 'transform 0.75s cubic-bezier(0.65,0,0.35,1), filter 0.6s ease',
                   zIndex: front ? 30 : 10,
                   cursor: front ? 'default' : 'pointer',
                   boxShadow: front
@@ -250,6 +273,7 @@ function SediuCarousel() {
                   alt={img.alt}
                   className="absolute inset-0 w-full h-full object-cover"
                   draggable="false"
+                  loading="lazy"
                 />
               </div>
             );
@@ -281,9 +305,11 @@ function SediuCarousel() {
             type="button"
             onClick={() => at(k)}
             aria-label={'Mergi la imaginea ' + (k + 1)}
-            className="h-2 rounded-full transition-all duration-300"
+            className="h-2 rounded-full transition-transform duration-300"
             style={{
-              width: k === i ? 22 : 8,
+              width: 22,
+              transformOrigin: 'left center',
+              transform: k === i ? 'scaleX(1)' : 'scaleX(0.36)',
               backgroundColor: k === i ? '#FFFFFF' : 'rgba(255,255,255,0.45)',
             }}
           ></button>

@@ -1325,8 +1325,9 @@ function HeroEditorial() {
     }
   }, /*#__PURE__*/React.createElement("img", {
     src: "assets/hero-main.webp",
-    alt: "Sesiune de meditatii la Centrul de Pregatire Constanta",
-    className: "absolute inset-0 w-full h-full object-cover rounded-3xl"
+    alt: "Sesiune de meditații la Centrul de Pregătire Constanța",
+    className: "absolute inset-0 w-full h-full object-cover rounded-3xl",
+    fetchpriority: "high"
   }), /*#__PURE__*/React.createElement("div", {
     className: "absolute -bottom-5 -left-3 md:-left-6 bg-white rounded-2xl px-5 py-4 shadow-card-hover flex items-center gap-3 max-w-[260px]"
   }, /*#__PURE__*/React.createElement("span", {
@@ -1447,18 +1448,39 @@ function HeroBold() {
   }, "Vezi cine suntem →"))));
 }
 function VideoPrezentare() {
+  const [loaded, setLoaded] = React.useState(false);
+  const id = 'jwFqOM7dfCY';
   return /*#__PURE__*/React.createElement("div", {
     className: "relative w-full rounded-2xl md:rounded-3xl overflow-hidden shadow-card bg-bordo-deep",
     style: {
       aspectRatio: '9 / 16'
     }
-  }, /*#__PURE__*/React.createElement("iframe", {
+  }, loaded ? /*#__PURE__*/React.createElement("iframe", {
     className: "absolute inset-0 w-full h-full border-0",
-    src: "https://www.youtube.com/embed/jwFqOM7dfCY?rel=0&modestbranding=1",
+    src: 'https://www.youtube.com/embed/' + id + '?rel=0&modestbranding=1&autoplay=1',
     title: "Prezentare Centrul de Pregătire Constanța",
     allow: "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture",
     allowFullScreen: true
-  }));
+  }) : /*#__PURE__*/React.createElement("button", {
+    type: "button",
+    className: "absolute inset-0 w-full h-full flex items-center justify-center group bg-bordo-deep/10",
+    onClick: () => setLoaded(true),
+    "aria-label": "Redă videoclipul de prezentare"
+  }, /*#__PURE__*/React.createElement("img", {
+    src: 'https://i.ytimg.com/vi/' + id + '/hqdefault.jpg',
+    alt: "Prezentare Centrul de Pregătire Constanța",
+    className: "absolute inset-0 w-full h-full object-cover",
+    loading: "lazy"
+  }), /*#__PURE__*/React.createElement("span", {
+    className: "relative z-10 w-16 h-16 rounded-full bg-white/95 text-bordo-deep flex items-center justify-center shadow-lg transition-transform group-hover:scale-110 group-active:scale-95"
+  }, /*#__PURE__*/React.createElement("svg", {
+    viewBox: "0 0 24 24",
+    fill: "currentColor",
+    className: "w-7 h-7 ml-1",
+    "aria-hidden": "true"
+  }, /*#__PURE__*/React.createElement("path", {
+    d: "M8 5.14v13.72a1 1 0 001.54.84l10.5-6.86a1 1 0 000-1.68L9.54 4.3A1 1 0 008 5.14z"
+  })))));
 }
 function _VideoPrezentareOLD_UNUSED() {
   const videoRef = React.useRef(null);
@@ -1558,7 +1580,7 @@ function SediuCarousel() {
         borderRadius: 28,
         transform: transformFor(rel),
         transformStyle: 'preserve-3d',
-        transition: 'transform 0.75s cubic-bezier(0.65,0,0.35,1), box-shadow 0.6s ease, filter 0.6s ease',
+        transition: 'transform 0.75s cubic-bezier(0.65,0,0.35,1), filter 0.6s ease',
         zIndex: front ? 30 : 10,
         cursor: front ? 'default' : 'pointer',
         boxShadow: front ? '0 30px 60px -18px rgba(20,8,10,0.55)' : '0 16px 36px -16px rgba(20,8,10,0.5)',
@@ -1568,7 +1590,8 @@ function SediuCarousel() {
       src: img.src,
       alt: img.alt,
       className: "absolute inset-0 w-full h-full object-cover",
-      draggable: "false"
+      draggable: "false",
+      loading: "lazy"
     }));
   }))), /*#__PURE__*/React.createElement("button", {
     type: "button",
@@ -1607,9 +1630,11 @@ function SediuCarousel() {
     type: "button",
     onClick: () => at(k),
     "aria-label": 'Mergi la imaginea ' + (k + 1),
-    className: "h-2 rounded-full transition-all duration-300",
+    className: "h-2 rounded-full transition-transform duration-300",
     style: {
-      width: k === i ? 22 : 8,
+      width: 22,
+      transformOrigin: 'left center',
+      transform: k === i ? 'scaleX(1)' : 'scaleX(0.36)',
       backgroundColor: k === i ? '#FFFFFF' : 'rgba(255,255,255,0.45)'
     }
   }))));

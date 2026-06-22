@@ -64,10 +64,22 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="preconnect" href="https://i.ytimg.com" />
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Source+Sans+3:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=optional" media="print" onload="this.media='all'" />
 <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Source+Sans+3:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=optional" /></noscript>
 
 <link rel="stylesheet" href="dist/tailwind.css" />
+
+<link rel="preload" href="assets/logo-emblem.webp" as="image" />
+<link rel="preload" href="assets/hero-main.webp" as="image" />
+<link rel="preload" href="dist/react.production.min.js" as="script" />
+<link rel="preload" href="dist/react-dom.production.min.js" as="script" />
+<link rel="preload" href="dist/bundle.min.js" as="script" />
+
+<script defer src="dist/react.production.min.js"></script>
+<script defer src="dist/react-dom.production.min.js"></script>
+<script defer src="image-slot.js"></script>
+<script defer src="dist/bundle.min.js"></script>
 
 <style>
   html { font-size: 112.5%; scroll-behavior: smooth; }
@@ -172,12 +184,17 @@
 </head>
 <body class="text-ink">
 
-<div id="root"></div>
-
-<script src="dist/react.production.min.js"></script>
-<script src="dist/react-dom.production.min.js"></script>
-<script src="image-slot.js"></script>
-<script src="dist/bundle.min.js"></script>
+<div id="root">
+  <div style="min-height:100vh;display:flex;flex-direction:column">
+    <header style="padding:10px 20px;display:flex;align-items:center;gap:10px;border-bottom:1px solid #EDDFC2;background:#fff">
+      <img src="assets/logo-emblem.webp" width="36" height="36" alt="" style="border-radius:6px;object-fit:contain" />
+      <span style="font-family:Georgia,serif;font-weight:600;font-size:1rem;color:#063944">Centrul de Pregătire <span style="color:#0A5360">CONSTANȚA</span></span>
+    </header>
+    <div style="flex:1;display:flex;align-items:center;justify-content:center">
+      <p style="font-family:Georgia,serif;font-size:1.25rem;color:#063944;opacity:.5">Se încarcă...</p>
+    </div>
+  </div>
+</div>
 
 </body>
 </html>
