@@ -317,10 +317,7 @@ function Footer() {
   }, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
     className: "flex items-center gap-3 mb-4"
   }, /*#__PURE__*/React.createElement("span", {
-    className: "w-14 h-14 flex-shrink-0",
-    style: {
-      filter: 'brightness(0) invert(1)'
-    }
+    className: "w-14 h-14 flex-shrink-0 rounded-xl overflow-hidden"
   }, /*#__PURE__*/React.createElement("img", {
     src: "assets/logo-emblem.webp",
     alt: "",

@@ -192,7 +192,7 @@ function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-16">
           <div>
             <div className="flex items-center gap-3 mb-4">
-              <span className="w-14 h-14 flex-shrink-0" style={{ filter: 'brightness(0) invert(1)' }}>
+              <span className="w-14 h-14 flex-shrink-0 rounded-xl overflow-hidden">
                 <img src="assets/logo-emblem.webp" alt="" className="w-full h-full object-contain" />
               </span>
               <div>
