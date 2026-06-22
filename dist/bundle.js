@@ -1323,17 +1323,10 @@ function HeroEditorial() {
     style: {
       aspectRatio: '4 / 5'
     }
-  }, /*#__PURE__*/React.createElement("image-slot", {
-    id: "hero-main",
-    shape: "rounded",
-    radius: "24",
-    placeholder: "Trage o poză aici (ex. o ședință la sediu sau profesorii)",
-    style: {
-      position: 'absolute',
-      inset: 0,
-      width: '100%',
-      height: '100%'
-    }
+  }, /*#__PURE__*/React.createElement("img", {
+    src: "assets/hero-main.webp",
+    alt: "Sesiune de meditatii la Centrul de Pregatire Constanta",
+    className: "absolute inset-0 w-full h-full object-cover rounded-3xl"
   }), /*#__PURE__*/React.createElement("div", {
     className: "absolute -bottom-5 -left-3 md:-left-6 bg-white rounded-2xl px-5 py-4 shadow-card-hover flex items-center gap-3 max-w-[260px]"
   }, /*#__PURE__*/React.createElement("span", {
