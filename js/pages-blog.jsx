@@ -194,7 +194,7 @@ function BlogArticlePage({ slug }) {
             </span>
             <div>
               <div className="font-semibold text-bordo-deep">{article.author}</div>
-              <div className="text-sm text-ink-muted">Profesor la Centrul de Pregătire Constanța</div>
+              <div className="text-sm text-ink-muted">Profesor la Centru de pregătire Constanța</div>
             </div>
           </div>
         </div>

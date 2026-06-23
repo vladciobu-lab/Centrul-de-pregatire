@@ -178,7 +178,7 @@ function ContactPage() {
 
             <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-soft relative bg-cream-warm">
               <iframe
-                title="Centrul de Pregătire Constanța"
+                title="Centru de pregătire Constanța"
                 src="https://www.google.com/maps?q=Strada+Soveja+90+Constanta&output=embed"
                 className="absolute inset-0 w-full h-full border-0"
                 loading="lazy"
@@ -201,7 +201,7 @@ function PrivacyPage() {
         <div className="prose-article">
           <p><strong>Ultima actualizare:</strong> 11 mai 2026</p>
 
-          <p>Centrul de Pregătire Constanța („noi") respectă confidențialitatea datelor tale și se conformează Regulamentului General privind Protecția Datelor (GDPR, Regulamentul UE 2016/679) și legislației române aplicabile.</p>
+          <p>Centru de pregătire Constanța („noi") respectă confidențialitatea datelor tale și se conformează Regulamentului General privind Protecția Datelor (GDPR, Regulamentul UE 2016/679) și legislației române aplicabile.</p>
 
           <h2>1. Ce date colectăm</h2>
           <p>Atunci când completezi formularul de contact sau ne scrii pe WhatsApp/email, colectăm:</p>
@@ -272,7 +272,7 @@ function TermsPage() {
         <div className="prose-article">
           <p><strong>Ultima actualizare:</strong> 2 iunie 2026</p>
 
-          <p>Acești termeni descriu condițiile în care Centrul de Pregătire Constanța („noi") oferă servicii de meditații și pregătire școlară. Prin programarea unei ședințe, ești de acord cu cele de mai jos.</p>
+          <p>Acești termeni descriu condițiile în care Centru de pregătire Constanța („noi") oferă servicii de meditații și pregătire școlară. Prin programarea unei ședințe, ești de acord cu cele de mai jos.</p>
 
           <h2>1. Serviciile noastre</h2>
           <p>Oferim meditații și pregătire școlară la sediul din Constanța, pentru diverse clase și materii: recuperare la materie, pregătire pentru Evaluarea Națională și Bacalaureat. Lucrăm în grupe restrânse de 2-3 elevi, cu materiale fizice și tablă.</p>

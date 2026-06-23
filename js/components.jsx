@@ -1,7 +1,7 @@
 // Shared components: Header, Footer, WhatsApp, Button, Card, SectionTitle, etc.
 const { useState, useEffect, useRef, useMemo } = React;
 
-const WHATSAPP_URL = 'https://wa.me/40721628936?text=Bun%C4%83!%20Sunt%20interesat%20de%20medita%C8%9Bii%20la%20Centrul%20de%20Preg%C4%83tire';
+const WHATSAPP_URL = 'https://wa.me/40721628936?text=Bun%C4%83!%20Sunt%20interesat%20de%20medita%C8%9Bii%20la%20Centru%20de%20preg%C4%83tire';
 const PHONE = '+40 721 628 936';
 const EMAIL = 'contact@centrudepregatire.ro';
 const ADDRESS = 'Strada Soveja nr. 90, Constanța';
@@ -86,10 +86,10 @@ function Logo({ size = 'md', linked = true }) {
   const inner = (
     <span className="flex items-center gap-2.5">
       <span className={`${sizes[size]} relative flex-shrink-0 block`}>
-        <img src="assets/logo-emblem.webp" alt="Centrul de Pregătire Constanța" className="absolute inset-0 w-full h-full object-contain" />
+        <img src="assets/logo-emblem.webp" alt="Centru de pregătire Constanța" className="absolute inset-0 w-full h-full object-contain" />
       </span>
       <span className="flex flex-col leading-none">
-        <span className={`serif-h ${txt[size]} text-bordo-deep leading-[1.05] whitespace-nowrap`}>Centrul de Pregătire</span>
+        <span className={`serif-h ${txt[size]} text-bordo-deep leading-[1.05] whitespace-nowrap`}>Centru de pregătire</span>
         <span className={`${sub[size]} uppercase tracking-[0.3em] text-teal-deep font-semibold mt-1`}>Constanța</span>
       </span>
     </span>
@@ -196,7 +196,7 @@ function Footer() {
                 <img src="assets/logo-emblem.webp" alt="" className="w-full h-full object-contain" />
               </span>
               <div>
-                <div className="serif-h text-cream text-lg">Centrul de Pregătire</div>
+                <div className="serif-h text-cream text-lg">Centru de pregătire</div>
                 <div className="text-rose text-[10px] uppercase tracking-[0.3em]">Constanța</div>
               </div>
             </div>
@@ -245,7 +245,7 @@ function Footer() {
 
         <div className="border-t border-cream/15 mt-12 pt-6 flex flex-col gap-4 text-xs text-cream/60">
           <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-3">
-            <div>© 2026 Centrul de Pregătire Constanța. Toate drepturile rezervate.</div>
+            <div>© 2026 Centru de pregătire Constanța. Toate drepturile rezervate.</div>
             <div className="flex flex-wrap gap-x-5 gap-y-2">
               <a href="#/confidentialitate" className="hover:text-rose">Politică de confidențialitate</a>
               <a href="#/termeni" className="hover:text-rose">Termeni și condiții</a>

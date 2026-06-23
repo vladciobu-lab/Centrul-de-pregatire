@@ -3,7 +3,7 @@
 function AboutPage() {
   return (
     <>
-      <PageHero kicker="Cine suntem" title="Centrul de Pregătire Constanța" subtitle="O echipă de profesori dedicați meditațiilor pentru Evaluarea Națională, Bacalaureat și recuperarea materiei." />
+      <PageHero kicker="Cine suntem" title="Centru de pregătire Constanța" subtitle="O echipă de profesori dedicați meditațiilor pentru Evaluarea Națională, Bacalaureat și recuperarea materiei." />
 
       <section className="py-16 md:py-20 px-4 md:px-6 max-w-3xl mx-auto">
         <Breadcrumb items={[{label:'Acasă', href:'acasa'}, {label:'Despre noi'}]} />
@@ -49,7 +49,7 @@ function AboutPage() {
 
           <div className="aspect-[16/9] md:aspect-[2/1] rounded-2xl overflow-hidden shadow-soft relative bg-cream-warm mt-7 md:mt-8">
             <iframe
-              title="Centrul de Pregătire Constanța"
+              title="Centru de pregătire Constanța"
               src="https://www.google.com/maps?q=Strada+Soveja+90+Constanta&output=embed"
               className="absolute inset-0 w-full h-full border-0"
               loading="lazy"
