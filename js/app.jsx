@@ -20,7 +20,7 @@ function applySeo(main) {
   set('meta[property="og:description"]', 'content', s.d);
   set('meta[name="twitter:title"]', 'content', s.t);
   set('meta[name="twitter:description"]', 'content', s.d);
-  set('link[rel="canonical"]', 'href', 'https://centruldepregatire.ro/#/' + (main || 'acasa'));
+  set('link[rel="canonical"]', 'href', 'https://centrudepregatire.ro/#/' + (main || 'acasa'));
 }
 
 const TWEAK_DEFAULTS = {

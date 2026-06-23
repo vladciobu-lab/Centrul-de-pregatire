@@ -3,7 +3,7 @@ const { useState, useEffect, useRef, useMemo } = React;
 
 const WHATSAPP_URL = 'https://wa.me/40721628936?text=Bun%C4%83!%20Sunt%20interesat%20de%20medita%C8%9Bii%20la%20Centrul%20de%20Preg%C4%83tire';
 const PHONE = '+40 721 628 936';
-const EMAIL = 'contact@centruldepregatire.ro';
+const EMAIL = 'contact@centrudepregatire.ro';
 const ADDRESS = 'Strada Soveja nr. 90, Constanța';
 
 // ---------- Navigation hook ----------
