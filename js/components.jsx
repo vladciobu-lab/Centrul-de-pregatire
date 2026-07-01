@@ -228,9 +228,13 @@ function Footer() {
           <div>
             <h4 className="text-cream font-semibold text-sm uppercase tracking-wider mb-4">Urmărește-ne</h4>
             <div className="flex gap-3 mb-6">
-              {['Facebook', 'Instagram', 'TikTok'].map(s => (
-                <a key={s} href="#" target="_blank" rel="noopener" className="w-10 h-10 rounded-full bg-cream/10 hover:bg-cream/20 flex items-center justify-center text-cream/80 hover:text-cream transition-colors text-xs font-medium">
-                  {s[0]}
+              {[
+                { name: 'Facebook', href: 'https://www.facebook.com/profile.php?id=61587062261629' },
+                { name: 'Instagram', href: '#' },
+                { name: 'TikTok', href: '#' },
+              ].map(s => (
+                <a key={s.name} href={s.href} target="_blank" rel="noopener" className="w-10 h-10 rounded-full bg-cream/10 hover:bg-cream/20 flex items-center justify-center text-cream/80 hover:text-cream transition-colors text-xs font-medium">
+                  {s.name[0]}
                 </a>
               ))}
             </div>
