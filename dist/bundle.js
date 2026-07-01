@@ -809,13 +809,13 @@ function Footer() {
     className: "text-cream font-semibold text-sm uppercase tracking-wider mb-4"
   }, "Urmărește-ne"), /*#__PURE__*/React.createElement("div", {
     className: "flex gap-3 mb-6"
-  }, ['Facebook', 'Instagram', 'TikTok'].map(s => /*#__PURE__*/React.createElement("a", {
-    key: s,
-    href: "#",
+  }, [{name:'Facebook',href:'https://www.facebook.com/profile.php?id=61587062261629'},{name:'Instagram',href:'#'},{name:'TikTok',href:'#'}].map(s => /*#__PURE__*/React.createElement("a", {
+    key: s.name,
+    href: s.href,
     target: "_blank",
     rel: "noopener",
     className: "w-10 h-10 rounded-full bg-cream/10 hover:bg-cream/20 flex items-center justify-center text-cream/80 hover:text-cream transition-colors text-xs font-medium"
-  }, s[0]))), /*#__PURE__*/React.createElement("a", {
+  }, s.name[0]))), /*#__PURE__*/React.createElement("a", {
     href: WHATSAPP_URL,
     target: "_blank",
     rel: "noopener",
