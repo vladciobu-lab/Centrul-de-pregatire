@@ -809,7 +809,7 @@ function Footer() {
     className: "text-cream font-semibold text-sm uppercase tracking-wider mb-4"
   }, "Urmărește-ne"), /*#__PURE__*/React.createElement("div", {
     className: "flex gap-3 mb-6"
-  }, [{name:'Facebook',href:'https://www.facebook.com/profile.php?id=61587062261629'},{name:'Instagram',href:'#'},{name:'TikTok',href:'#'}].map(s => /*#__PURE__*/React.createElement("a", {
+  }, [{name:'Facebook',href:'https://www.facebook.com/profile.php?id=61587062261629'},{name:'Instagram',href:'https://www.instagram.com/constantameditatii?igsh=MXM1a2I4cjJiMDhqcQ=='},{name:'TikTok',href:'#'}].map(s => /*#__PURE__*/React.createElement("a", {
     key: s.name,
     href: s.href,
     target: "_blank",

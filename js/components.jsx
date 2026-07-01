@@ -230,7 +230,7 @@ function Footer() {
             <div className="flex gap-3 mb-6">
               {[
                 { name: 'Facebook', href: 'https://www.facebook.com/profile.php?id=61587062261629' },
-                { name: 'Instagram', href: '#' },
+                { name: 'Instagram', href: 'https://www.instagram.com/constantameditatii?igsh=MXM1a2I4cjJiMDhqcQ==' },
                 { name: 'TikTok', href: '#' },
               ].map(s => (
                 <a key={s.name} href={s.href} target="_blank" rel="noopener" className="w-10 h-10 rounded-full bg-cream/10 hover:bg-cream/20 flex items-center justify-center text-cream/80 hover:text-cream transition-colors text-xs font-medium">
