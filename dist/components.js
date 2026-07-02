@@ -5,9 +5,9 @@ const {
   useRef,
   useMemo
 } = React;
-const WHATSAPP_URL = 'https://wa.me/40721628936?text=Bun%C4%83!%20Sunt%20interesat%20de%20medita%C8%9Bii%20la%20Centrul%20de%20Preg%C4%83tire';
+const WHATSAPP_URL = 'https://wa.me/40721628936?text=Bun%C4%83!%20Sunt%20interesat%20de%20medita%C8%9Bii%20la%20Centru%20de%20preg%C4%83tire';
 const PHONE = '+40 721 628 936';
-const EMAIL = 'contact@centruldepregatire.ro';
+const EMAIL = 'contact@centrudepregatire.ro';
 const ADDRESS = 'Strada Soveja nr. 90, Constanța';
 
 // ---------- Navigation hook ----------
@@ -159,13 +159,13 @@ function Logo({
     className: `${sizes[size]} relative flex-shrink-0 block`
   }, /*#__PURE__*/React.createElement("img", {
     src: "assets/logo-emblem.webp",
-    alt: "Centrul de Pregătire Constanța",
+    alt: "Centru de pregătire Constanța",
     className: "absolute inset-0 w-full h-full object-contain"
   })), /*#__PURE__*/React.createElement("span", {
     className: "flex flex-col leading-none"
   }, /*#__PURE__*/React.createElement("span", {
     className: `serif-h ${txt[size]} text-bordo-deep leading-[1.05] whitespace-nowrap`
-  }, "Centrul de Pregătire"), /*#__PURE__*/React.createElement("span", {
+  }, "Centru de pregătire"), /*#__PURE__*/React.createElement("span", {
     className: `${sub[size]} uppercase tracking-[0.3em] text-teal-deep font-semibold mt-1`
   }, "Constanța")));
   return linked ? /*#__PURE__*/React.createElement("a", {
@@ -324,7 +324,7 @@ function Footer() {
     className: "w-full h-full object-contain"
   })), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
     className: "serif-h text-cream text-lg"
-  }, "Centrul de Pregătire"), /*#__PURE__*/React.createElement("div", {
+  }, "Centru de pregătire"), /*#__PURE__*/React.createElement("div", {
     className: "text-rose text-[10px] uppercase tracking-[0.3em]"
   }, "Constanța"))), /*#__PURE__*/React.createElement("p", {
     className: "text-sm leading-relaxed text-cream/70"
@@ -362,13 +362,22 @@ function Footer() {
     className: "text-cream font-semibold text-sm uppercase tracking-wider mb-4"
   }, "Urmărește-ne"), /*#__PURE__*/React.createElement("div", {
     className: "flex gap-3 mb-6"
-  }, ['Facebook', 'Instagram', 'TikTok'].map(s => /*#__PURE__*/React.createElement("a", {
-    key: s,
-    href: "#",
+  }, [{
+    name: 'Facebook',
+    href: 'https://www.facebook.com/profile.php?id=61587062261629'
+  }, {
+    name: 'Instagram',
+    href: 'https://www.instagram.com/constantameditatii?igsh=MXM1a2I4cjJiMDhqcQ=='
+  }, {
+    name: 'TikTok',
+    href: 'https://www.tiktok.com/@pregatirebac'
+  }].map(s => /*#__PURE__*/React.createElement("a", {
+    key: s.name,
+    href: s.href,
     target: "_blank",
     rel: "noopener",
     className: "w-10 h-10 rounded-full bg-cream/10 hover:bg-cream/20 flex items-center justify-center text-cream/80 hover:text-cream transition-colors text-xs font-medium"
-  }, s[0]))), /*#__PURE__*/React.createElement("a", {
+  }, s.name[0]))), /*#__PURE__*/React.createElement("a", {
     href: WHATSAPP_URL,
     target: "_blank",
     rel: "noopener",
@@ -384,7 +393,7 @@ function Footer() {
     className: "border-t border-cream/15 mt-12 pt-6 flex flex-col gap-4 text-xs text-cream/60"
   }, /*#__PURE__*/React.createElement("div", {
     className: "flex flex-col md:flex-row items-start md:items-center justify-between gap-3"
-  }, /*#__PURE__*/React.createElement("div", null, "© 2026 Centrul de Pregătire Constanța. Toate drepturile rezervate."), /*#__PURE__*/React.createElement("div", {
+  }, /*#__PURE__*/React.createElement("div", null, "© 2026 Centru de pregătire Constanța. Toate drepturile rezervate."), /*#__PURE__*/React.createElement("div", {
     className: "flex flex-wrap gap-x-5 gap-y-2"
   }, /*#__PURE__*/React.createElement("a", {
     href: "#/confidentialitate",

@@ -280,7 +280,7 @@ function BlogArticlePage({
     className: "font-semibold text-bordo-deep"
   }, article.author), /*#__PURE__*/React.createElement("div", {
     className: "text-sm text-ink-muted"
-  }, "Profesor la Centrul de Pregătire Constanța"))))), /*#__PURE__*/React.createElement("section", {
+  }, "Profesor la Centru de pregătire Constanța"))))), /*#__PURE__*/React.createElement("section", {
     className: "py-16 px-4 md:px-6 lg:px-10 bg-cream-warm/40"
   }, /*#__PURE__*/React.createElement("div", {
     className: "max-w-6xl mx-auto"

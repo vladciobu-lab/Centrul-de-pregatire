@@ -3,7 +3,7 @@
 function AboutPage() {
   return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(PageHero, {
     kicker: "Cine suntem",
-    title: "Centrul de Pregătire Constanța",
+    title: "Centru de pregătire Constanța",
     subtitle: "O echipă de profesori dedicați meditațiilor pentru Evaluarea Națională, Bacalaureat și recuperarea materiei."
   }), /*#__PURE__*/React.createElement("section", {
     className: "py-16 md:py-20 px-4 md:px-6 max-w-3xl mx-auto"
@@ -66,7 +66,7 @@ function AboutPage() {
   }, "Program:"), " Luni-Vineri 9:00 - 20:00 · Sâmbătă 9:00 - 16:00"))), /*#__PURE__*/React.createElement("div", {
     className: "aspect-[16/9] md:aspect-[2/1] rounded-2xl overflow-hidden shadow-soft relative bg-cream-warm mt-7 md:mt-8"
   }, /*#__PURE__*/React.createElement("iframe", {
-    title: "Centrul de Pregătire Constanța",
+    title: "Centru de pregătire Constanța",
     src: "https://www.google.com/maps?q=Strada+Soveja+90+Constanta&output=embed",
     className: "absolute inset-0 w-full h-full border-0",
     loading: "lazy",

@@ -444,7 +444,6 @@ window.TEAM = TEAM;
 window.TESTIMONIALS = TESTIMONIALS;
 window.PRICES = PRICES;
 window.BLOG = BLOG;
-
 // Shared components: Header, Footer, WhatsApp, Button, Card, SectionTitle, etc.
 const {
   useState,
@@ -452,9 +451,9 @@ const {
   useRef,
   useMemo
 } = React;
-const WHATSAPP_URL = 'https://wa.me/40721628936?text=Bun%C4%83!%20Sunt%20interesat%20de%20medita%C8%9Bii%20la%20Centrul%20de%20Preg%C4%83tire';
+const WHATSAPP_URL = 'https://wa.me/40721628936?text=Bun%C4%83!%20Sunt%20interesat%20de%20medita%C8%9Bii%20la%20Centru%20de%20preg%C4%83tire';
 const PHONE = '+40 721 628 936';
-const EMAIL = 'contact@centruldepregatire.ro';
+const EMAIL = 'contact@centrudepregatire.ro';
 const ADDRESS = 'Strada Soveja nr. 90, Constanța';
 
 // ---------- Navigation hook ----------
@@ -606,13 +605,13 @@ function Logo({
     className: `${sizes[size]} relative flex-shrink-0 block`
   }, /*#__PURE__*/React.createElement("img", {
     src: "assets/logo-emblem.webp",
-    alt: "Centrul de Pregătire Constanța",
+    alt: "Centru de pregătire Constanța",
     className: "absolute inset-0 w-full h-full object-contain"
   })), /*#__PURE__*/React.createElement("span", {
     className: "flex flex-col leading-none"
   }, /*#__PURE__*/React.createElement("span", {
     className: `serif-h ${txt[size]} text-bordo-deep leading-[1.05] whitespace-nowrap`
-  }, "Centrul de Pregătire"), /*#__PURE__*/React.createElement("span", {
+  }, "Centru de pregătire"), /*#__PURE__*/React.createElement("span", {
     className: `${sub[size]} uppercase tracking-[0.3em] text-teal-deep font-semibold mt-1`
   }, "Constanța")));
   return linked ? /*#__PURE__*/React.createElement("a", {
@@ -771,7 +770,7 @@ function Footer() {
     className: "w-full h-full object-contain"
   })), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
     className: "serif-h text-cream text-lg"
-  }, "Centrul de Pregătire"), /*#__PURE__*/React.createElement("div", {
+  }, "Centru de pregătire"), /*#__PURE__*/React.createElement("div", {
     className: "text-rose text-[10px] uppercase tracking-[0.3em]"
   }, "Constanța"))), /*#__PURE__*/React.createElement("p", {
     className: "text-sm leading-relaxed text-cream/70"
@@ -809,7 +808,16 @@ function Footer() {
     className: "text-cream font-semibold text-sm uppercase tracking-wider mb-4"
   }, "Urmărește-ne"), /*#__PURE__*/React.createElement("div", {
     className: "flex gap-3 mb-6"
-  }, [{name:'Facebook',href:'https://www.facebook.com/profile.php?id=61587062261629'},{name:'Instagram',href:'https://www.instagram.com/constantameditatii?igsh=MXM1a2I4cjJiMDhqcQ=='},{name:'TikTok',href:'https://www.tiktok.com/@pregatirebac'}].map(s => /*#__PURE__*/React.createElement("a", {
+  }, [{
+    name: 'Facebook',
+    href: 'https://www.facebook.com/profile.php?id=61587062261629'
+  }, {
+    name: 'Instagram',
+    href: 'https://www.instagram.com/constantameditatii?igsh=MXM1a2I4cjJiMDhqcQ=='
+  }, {
+    name: 'TikTok',
+    href: 'https://www.tiktok.com/@pregatirebac'
+  }].map(s => /*#__PURE__*/React.createElement("a", {
     key: s.name,
     href: s.href,
     target: "_blank",
@@ -831,7 +839,7 @@ function Footer() {
     className: "border-t border-cream/15 mt-12 pt-6 flex flex-col gap-4 text-xs text-cream/60"
   }, /*#__PURE__*/React.createElement("div", {
     className: "flex flex-col md:flex-row items-start md:items-center justify-between gap-3"
-  }, /*#__PURE__*/React.createElement("div", null, "© 2026 Centrul de Pregătire Constanța. Toate drepturile rezervate."), /*#__PURE__*/React.createElement("div", {
+  }, /*#__PURE__*/React.createElement("div", null, "© 2026 Centru de pregătire Constanța. Toate drepturile rezervate."), /*#__PURE__*/React.createElement("div", {
     className: "flex flex-wrap gap-x-5 gap-y-2"
   }, /*#__PURE__*/React.createElement("a", {
     href: "#/confidentialitate",
@@ -1163,7 +1171,6 @@ Object.assign(window, {
   EMAIL,
   ADDRESS
 });
-
 // Home page with 3 hero variations.
 
 // ---------- Discrete line icons ----------
@@ -1322,7 +1329,7 @@ function HeroEditorial() {
     }
   }, /*#__PURE__*/React.createElement("img", {
     src: "assets/hero-main.webp",
-    alt: "Sesiune de meditații la Centrul de Pregătire Constanța",
+    alt: "Sesiune de meditații la Centru de pregătire Constanța",
     className: "absolute inset-0 w-full h-full object-cover rounded-3xl",
     fetchpriority: "high"
   }), /*#__PURE__*/React.createElement("div", {
@@ -1446,7 +1453,7 @@ function HeroBold() {
 }
 function VideoPrezentare() {
   const [loaded, setLoaded] = React.useState(false);
-  const id = 'jwFqOM7dfCY';
+  const id = 'cHO5VCknWo8';
   return /*#__PURE__*/React.createElement("div", {
     className: "relative w-full rounded-2xl md:rounded-3xl overflow-hidden shadow-card bg-bordo-deep",
     style: {
@@ -1455,7 +1462,7 @@ function VideoPrezentare() {
   }, loaded ? /*#__PURE__*/React.createElement("iframe", {
     className: "absolute inset-0 w-full h-full border-0",
     src: 'https://www.youtube.com/embed/' + id + '?rel=0&modestbranding=1&autoplay=1',
-    title: "Prezentare Centrul de Pregătire Constanța",
+    title: "Prezentare Centru de pregătire Constanța",
     allow: "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture",
     allowFullScreen: true
   }) : /*#__PURE__*/React.createElement("button", {
@@ -1465,7 +1472,7 @@ function VideoPrezentare() {
     "aria-label": "Redă videoclipul de prezentare"
   }, /*#__PURE__*/React.createElement("img", {
     src: 'https://i.ytimg.com/vi/' + id + '/hqdefault.jpg',
-    alt: "Prezentare Centrul de Pregătire Constanța",
+    alt: "Prezentare Centru de pregătire Constanța",
     className: "absolute inset-0 w-full h-full object-cover",
     loading: "lazy"
   }), /*#__PURE__*/React.createElement("span", {
@@ -1977,7 +1984,7 @@ function HomePage({
   }, ADDRESS)))), /*#__PURE__*/React.createElement("div", {
     className: "aspect-[4/3] rounded-2xl overflow-hidden shadow-soft relative bg-cream-warm mt-4"
   }, /*#__PURE__*/React.createElement("iframe", {
-    title: "Centrul de Pregătire Constanța",
+    title: "Centru de pregătire Constanța",
     src: "https://www.google.com/maps?q=Strada+Soveja+90+Constanta&output=embed",
     className: "absolute inset-0 w-full h-full border-0",
     loading: "lazy",
@@ -1991,13 +1998,12 @@ function HomePage({
 Object.assign(window, {
   HomePage
 });
-
 // About + Services pages.
 
 function AboutPage() {
   return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(PageHero, {
     kicker: "Cine suntem",
-    title: "Centrul de Pregătire Constanța",
+    title: "Centru de pregătire Constanța",
     subtitle: "O echipă de profesori dedicați meditațiilor pentru Evaluarea Națională, Bacalaureat și recuperarea materiei."
   }), /*#__PURE__*/React.createElement("section", {
     className: "py-16 md:py-20 px-4 md:px-6 max-w-3xl mx-auto"
@@ -2060,7 +2066,7 @@ function AboutPage() {
   }, "Program:"), " Luni-Vineri 9:00 - 20:00 · Sâmbătă 9:00 - 16:00"))), /*#__PURE__*/React.createElement("div", {
     className: "aspect-[16/9] md:aspect-[2/1] rounded-2xl overflow-hidden shadow-soft relative bg-cream-warm mt-7 md:mt-8"
   }, /*#__PURE__*/React.createElement("iframe", {
-    title: "Centrul de Pregătire Constanța",
+    title: "Centru de pregătire Constanța",
     src: "https://www.google.com/maps?q=Strada+Soveja+90+Constanta&output=embed",
     className: "absolute inset-0 w-full h-full border-0",
     loading: "lazy",
@@ -2070,7 +2076,6 @@ function AboutPage() {
 Object.assign(window, {
   AboutPage
 });
-
 // 404 page (subject pages removed).
 
 function NotFound() {
@@ -2090,7 +2095,6 @@ function NotFound() {
 Object.assign(window, {
   NotFound
 });
-
 // Prices + Testimonials pages.
 
 function PricesPage() {
@@ -2166,7 +2170,6 @@ Object.assign(window, {
   PricesPage,
   TestimonialsPage
 });
-
 // Blog hub + article pages.
 
 // ----- Mini markdown renderer -----
@@ -2449,7 +2452,7 @@ function BlogArticlePage({
     className: "font-semibold text-bordo-deep"
   }, article.author), /*#__PURE__*/React.createElement("div", {
     className: "text-sm text-ink-muted"
-  }, "Profesor la Centrul de Pregătire Constanța"))))), /*#__PURE__*/React.createElement("section", {
+  }, "Profesor la Centru de pregătire Constanța"))))), /*#__PURE__*/React.createElement("section", {
     className: "py-16 px-4 md:px-6 lg:px-10 bg-cream-warm/40"
   }, /*#__PURE__*/React.createElement("div", {
     className: "max-w-6xl mx-auto"
@@ -2474,7 +2477,6 @@ Object.assign(window, {
   BlogArticlePage,
   formatDate
 });
-
 // Contact + Privacy pages.
 
 function ContactForm({
@@ -2744,7 +2746,7 @@ function ContactPage() {
   }, "Duminică: închis"))), /*#__PURE__*/React.createElement("div", {
     className: "aspect-[4/3] rounded-2xl overflow-hidden shadow-soft relative bg-cream-warm"
   }, /*#__PURE__*/React.createElement("iframe", {
-    title: "Centrul de Pregătire Constanța",
+    title: "Centru de pregătire Constanța",
     src: "https://www.google.com/maps?q=Strada+Soveja+90+Constanta&output=embed",
     className: "absolute inset-0 w-full h-full border-0",
     loading: "lazy",
@@ -2767,7 +2769,7 @@ function PrivacyPage() {
     }]
   }), /*#__PURE__*/React.createElement("div", {
     className: "prose-article"
-  }, /*#__PURE__*/React.createElement("p", null, /*#__PURE__*/React.createElement("strong", null, "Ultima actualizare:"), " 11 mai 2026"), /*#__PURE__*/React.createElement("p", null, "Centrul de Pregătire Constanța („noi\") respectă confidențialitatea datelor tale și se conformează Regulamentului General privind Protecția Datelor (GDPR, Regulamentul UE 2016/679) și legislației române aplicabile."), /*#__PURE__*/React.createElement("h2", null, "1. Ce date colectăm"), /*#__PURE__*/React.createElement("p", null, "Atunci când completezi formularul de contact sau ne scrii pe WhatsApp/email, colectăm:"), /*#__PURE__*/React.createElement("ul", null, /*#__PURE__*/React.createElement("li", null, "Numele tău (sau al elevului)"), /*#__PURE__*/React.createElement("li", null, "Adresa de email"), /*#__PURE__*/React.createElement("li", null, "Numărul de telefon"), /*#__PURE__*/React.createElement("li", null, "Informații pe care alegi să le incluzi în mesaj (clasa, materia, situația școlară)")), /*#__PURE__*/React.createElement("h2", null, "2. De ce le folosim"), /*#__PURE__*/React.createElement("p", null, "Folosim aceste date ", /*#__PURE__*/React.createElement("strong", null, "exclusiv pentru"), ":"), /*#__PURE__*/React.createElement("ul", null, /*#__PURE__*/React.createElement("li", null, "A te contacta pentru programarea ședinței de cunoaștere"), /*#__PURE__*/React.createElement("li", null, "A te informa despre serviciile noastre la cererea ta"), /*#__PURE__*/React.createElement("li", null, "A păstra evidența ședințelor și a programărilor tale"), /*#__PURE__*/React.createElement("li", null, "A respecta obligațiile legale (facturare, contabilitate)")), /*#__PURE__*/React.createElement("p", null, "Nu trimitem newsletter, nu trimitem oferte nesolicitate, nu te abonăm la nimic fără să-ți cerem."), /*#__PURE__*/React.createElement("h2", null, "3. Cu cine partajăm datele"), /*#__PURE__*/React.createElement("p", null, "Nu vindem și nu partajăm datele tale cu terți pentru scopuri de marketing. Datele pot fi accesate de:"), /*#__PURE__*/React.createElement("ul", null, /*#__PURE__*/React.createElement("li", null, "Echipa noastră de profesori, strict pentru organizarea ședințelor"), /*#__PURE__*/React.createElement("li", null, "Furnizorul de servicii email (Formspree), strict pentru transmiterea formularului"), /*#__PURE__*/React.createElement("li", null, "Autorități fiscale, conform legii")), /*#__PURE__*/React.createElement("h2", null, "4. Cât timp păstrăm datele"), /*#__PURE__*/React.createElement("p", null, "Păstrăm datele pentru perioada colaborării și încă ", /*#__PURE__*/React.createElement("strong", null, "3 ani"), " după ultima ședință, pentru obligații legale (contabile, fiscale). După, le ștergem definitiv."), /*#__PURE__*/React.createElement("h2", null, "5. Drepturile tale"), /*#__PURE__*/React.createElement("p", null, "Conform GDPR, ai dreptul:"), /*#__PURE__*/React.createElement("ul", null, /*#__PURE__*/React.createElement("li", null, "Să afli ce date avem despre tine"), /*#__PURE__*/React.createElement("li", null, "Să ne ceri să le corectăm dacă sunt greșite"), /*#__PURE__*/React.createElement("li", null, "Să ne ceri să le ștergem (dacă nu există obligație legală de păstrare)"), /*#__PURE__*/React.createElement("li", null, "Să te opui prelucrării lor"), /*#__PURE__*/React.createElement("li", null, "Să retragi consimțământul oricând")), /*#__PURE__*/React.createElement("p", null, "Pentru oricare dintre acestea, scrie-ne la ", /*#__PURE__*/React.createElement("a", {
+  }, /*#__PURE__*/React.createElement("p", null, /*#__PURE__*/React.createElement("strong", null, "Ultima actualizare:"), " 11 mai 2026"), /*#__PURE__*/React.createElement("p", null, "Centru de pregătire Constanța („noi\") respectă confidențialitatea datelor tale și se conformează Regulamentului General privind Protecția Datelor (GDPR, Regulamentul UE 2016/679) și legislației române aplicabile."), /*#__PURE__*/React.createElement("h2", null, "1. Ce date colectăm"), /*#__PURE__*/React.createElement("p", null, "Atunci când completezi formularul de contact sau ne scrii pe WhatsApp/email, colectăm:"), /*#__PURE__*/React.createElement("ul", null, /*#__PURE__*/React.createElement("li", null, "Numele tău (sau al elevului)"), /*#__PURE__*/React.createElement("li", null, "Adresa de email"), /*#__PURE__*/React.createElement("li", null, "Numărul de telefon"), /*#__PURE__*/React.createElement("li", null, "Informații pe care alegi să le incluzi în mesaj (clasa, materia, situația școlară)")), /*#__PURE__*/React.createElement("h2", null, "2. De ce le folosim"), /*#__PURE__*/React.createElement("p", null, "Folosim aceste date ", /*#__PURE__*/React.createElement("strong", null, "exclusiv pentru"), ":"), /*#__PURE__*/React.createElement("ul", null, /*#__PURE__*/React.createElement("li", null, "A te contacta pentru programarea ședinței de cunoaștere"), /*#__PURE__*/React.createElement("li", null, "A te informa despre serviciile noastre la cererea ta"), /*#__PURE__*/React.createElement("li", null, "A păstra evidența ședințelor și a programărilor tale"), /*#__PURE__*/React.createElement("li", null, "A respecta obligațiile legale (facturare, contabilitate)")), /*#__PURE__*/React.createElement("p", null, "Nu trimitem newsletter, nu trimitem oferte nesolicitate, nu te abonăm la nimic fără să-ți cerem."), /*#__PURE__*/React.createElement("h2", null, "3. Cu cine partajăm datele"), /*#__PURE__*/React.createElement("p", null, "Nu vindem și nu partajăm datele tale cu terți pentru scopuri de marketing. Datele pot fi accesate de:"), /*#__PURE__*/React.createElement("ul", null, /*#__PURE__*/React.createElement("li", null, "Echipa noastră de profesori, strict pentru organizarea ședințelor"), /*#__PURE__*/React.createElement("li", null, "Furnizorul de servicii email (Formspree), strict pentru transmiterea formularului"), /*#__PURE__*/React.createElement("li", null, "Autorități fiscale, conform legii")), /*#__PURE__*/React.createElement("h2", null, "4. Cât timp păstrăm datele"), /*#__PURE__*/React.createElement("p", null, "Păstrăm datele pentru perioada colaborării și încă ", /*#__PURE__*/React.createElement("strong", null, "3 ani"), " după ultima ședință, pentru obligații legale (contabile, fiscale). După, le ștergem definitiv."), /*#__PURE__*/React.createElement("h2", null, "5. Drepturile tale"), /*#__PURE__*/React.createElement("p", null, "Conform GDPR, ai dreptul:"), /*#__PURE__*/React.createElement("ul", null, /*#__PURE__*/React.createElement("li", null, "Să afli ce date avem despre tine"), /*#__PURE__*/React.createElement("li", null, "Să ne ceri să le corectăm dacă sunt greșite"), /*#__PURE__*/React.createElement("li", null, "Să ne ceri să le ștergem (dacă nu există obligație legală de păstrare)"), /*#__PURE__*/React.createElement("li", null, "Să te opui prelucrării lor"), /*#__PURE__*/React.createElement("li", null, "Să retragi consimțământul oricând")), /*#__PURE__*/React.createElement("p", null, "Pentru oricare dintre acestea, scrie-ne la ", /*#__PURE__*/React.createElement("a", {
     href: `mailto:${EMAIL}`
   }, EMAIL), ". Răspundem în maxim 30 de zile."), /*#__PURE__*/React.createElement("h2", null, "6. Datele elevilor minori"), /*#__PURE__*/React.createElement("p", null, "O parte dintre elevii noștri sunt minori. În aceste cazuri, datele de contact (nume, telefon, email) sunt furnizate de ", /*#__PURE__*/React.createElement("strong", null, "părinte sau de tutorele legal"), ", care își dă consimțământul pentru prelucrarea lor. Nu colectăm în mod intenționat date de la copii fără acordul unui adult responsabil. Despre elev păstrăm doar informațiile strict necesare organizării ședințelor (clasă, materie, nivel). Dacă ești părinte și vrei să vezi, să corectezi sau să ștergi datele copilului tău, scrie-ne la ", /*#__PURE__*/React.createElement("a", {
     href: `mailto:${EMAIL}`
@@ -2793,7 +2795,7 @@ function TermsPage() {
     }]
   }), /*#__PURE__*/React.createElement("div", {
     className: "prose-article"
-  }, /*#__PURE__*/React.createElement("p", null, /*#__PURE__*/React.createElement("strong", null, "Ultima actualizare:"), " 2 iunie 2026"), /*#__PURE__*/React.createElement("p", null, "Acești termeni descriu condițiile în care Centrul de Pregătire Constanța („noi\") oferă servicii de meditații și pregătire școlară. Prin programarea unei ședințe, ești de acord cu cele de mai jos."), /*#__PURE__*/React.createElement("h2", null, "1. Serviciile noastre"), /*#__PURE__*/React.createElement("p", null, "Oferim meditații și pregătire școlară la sediul din Constanța, pentru diverse clase și materii: recuperare la materie, pregătire pentru Evaluarea Națională și Bacalaureat. Lucrăm în grupe restrânse de 2-3 elevi, cu materiale fizice și tablă."), /*#__PURE__*/React.createElement("h2", null, "2. Ședința de cunoaștere gratuită"), /*#__PURE__*/React.createElement("p", null, "Prima ședință, împreună cu testul inițial, este ", /*#__PURE__*/React.createElement("strong", null, "gratuită și fără obligații"), ". Scopul ei e să evaluăm nivelul real al elevului și să stabilim împreună un plan. Nu te obligă să continui colaborarea."), /*#__PURE__*/React.createElement("h2", null, "3. Programare și prezență"), /*#__PURE__*/React.createElement("p", null, "Ședințele se programează din timp, de comun acord. Te rugăm să anunți din timp dacă nu poți ajunge, ca să putem reorganiza grupa și să oferim locul altui elev."), /*#__PURE__*/React.createElement("h2", null, "4. Plata"), /*#__PURE__*/React.createElement("p", null, "Tarifele sunt cele afișate pe pagina ", /*#__PURE__*/React.createElement("a", {
+  }, /*#__PURE__*/React.createElement("p", null, /*#__PURE__*/React.createElement("strong", null, "Ultima actualizare:"), " 2 iunie 2026"), /*#__PURE__*/React.createElement("p", null, "Acești termeni descriu condițiile în care Centru de pregătire Constanța („noi\") oferă servicii de meditații și pregătire școlară. Prin programarea unei ședințe, ești de acord cu cele de mai jos."), /*#__PURE__*/React.createElement("h2", null, "1. Serviciile noastre"), /*#__PURE__*/React.createElement("p", null, "Oferim meditații și pregătire școlară la sediul din Constanța, pentru diverse clase și materii: recuperare la materie, pregătire pentru Evaluarea Națională și Bacalaureat. Lucrăm în grupe restrânse de 2-3 elevi, cu materiale fizice și tablă."), /*#__PURE__*/React.createElement("h2", null, "2. Ședința de cunoaștere gratuită"), /*#__PURE__*/React.createElement("p", null, "Prima ședință, împreună cu testul inițial, este ", /*#__PURE__*/React.createElement("strong", null, "gratuită și fără obligații"), ". Scopul ei e să evaluăm nivelul real al elevului și să stabilim împreună un plan. Nu te obligă să continui colaborarea."), /*#__PURE__*/React.createElement("h2", null, "3. Programare și prezență"), /*#__PURE__*/React.createElement("p", null, "Ședințele se programează din timp, de comun acord. Te rugăm să anunți din timp dacă nu poți ajunge, ca să putem reorganiza grupa și să oferim locul altui elev."), /*#__PURE__*/React.createElement("h2", null, "4. Plata"), /*#__PURE__*/React.createElement("p", null, "Tarifele sunt cele afișate pe pagina ", /*#__PURE__*/React.createElement("a", {
     href: "#/preturi"
   }, "Prețuri"), " și se comunică clar înainte de începerea colaborării. Plata se face conform înțelegerii stabilite la prima ședință (pe ședință sau pe pachet). Eventualele modificări de tarif sunt anunțate din timp și nu afectează ședințele deja plătite."), /*#__PURE__*/React.createElement("h2", null, "5. Anulare și reprogramare"), /*#__PURE__*/React.createElement("p", null, "Poți anula sau reprograma o ședință anunțându-ne cu cel puțin ", /*#__PURE__*/React.createElement("strong", null, "24 de ore înainte"), ", telefonic sau pe WhatsApp. Ședințele anunțate în timp util se reprogramează fără costuri."), /*#__PURE__*/React.createElement("h2", null, "6. Responsabilitățile noastre"), /*#__PURE__*/React.createElement("p", null, "Ne angajăm să oferim pregătire de calitate, cu profesori dedicați și un mediu de învățare potrivit. Rezultatele școlare depind însă de mai mulți factori (implicarea elevului, timpul de studiu acasă), așa că nu putem garanta o anumită notă sau un anumit rezultat la examen."), /*#__PURE__*/React.createElement("h2", null, "7. Responsabilitățile tale"), /*#__PURE__*/React.createElement("p", null, "Pentru rezultate bune, contează prezența constantă, efectuarea temelor recomandate și comunicarea deschisă cu profesorul. Pentru elevii minori, părintele sau tutorele susține colaborarea și ne anunță orice schimbare relevantă."), /*#__PURE__*/React.createElement("h2", null, "8. Modificarea termenilor"), /*#__PURE__*/React.createElement("p", null, "Putem actualiza acești termeni din când în când. Versiunea valabilă e cea publicată pe această pagină, cu data ultimei actualizări de mai sus."), /*#__PURE__*/React.createElement("h2", null, "9. Contact"), /*#__PURE__*/React.createElement("p", null, "Pentru orice întrebare legată de acești termeni: ", /*#__PURE__*/React.createElement("a", {
     href: `mailto:${EMAIL}`
@@ -2807,40 +2809,39 @@ Object.assign(window, {
   TermsPage,
   ContactForm
 });
-
 // App shell: router, Tweaks integration.
 
 const SEO = {
   acasa: {
-    t: 'Meditații Constanța — Evaluare Națională & Bacalaureat | Centrul de Pregătire',
+    t: 'Meditații Constanța — Evaluare Națională & Bacalaureat | Centru de pregătire',
     d: 'Meditații în Constanța pentru orice clasă și materie. Pregătire pentru Evaluarea Națională, Bacalaureat și recuperare la materie, la sediu în Constanța. Prima ședință e gratuită.'
   },
   despre: {
-    t: 'Despre noi — Cum lucrăm | Centrul de Pregătire Constanța',
+    t: 'Despre noi — Cum lucrăm | Centru de pregătire Constanța',
     d: 'Pornim de la nivelul tău real și construim pas cu pas. Lucrăm în grupe mici de 2-3 elevi, la sediul din Constanța, cu plan personalizat pentru fiecare elev.'
   },
   preturi: {
-    t: 'Prețuri meditații Constanța | Centrul de Pregătire',
+    t: 'Prețuri meditații Constanța | Centru de pregătire',
     d: 'Vezi prețurile pentru meditații în grupe mici de 2-3 elevi. Prima ședință de cunoaștere și testul inițial sunt gratuite.'
   },
   testimoniale: {
-    t: 'Testimoniale — Ce spun elevii și părinții | Centrul de Pregătire Constanța',
+    t: 'Testimoniale — Ce spun elevii și părinții | Centru de pregătire Constanța',
     d: 'Rezultate reale și experiențe ale elevilor și părinților care au lucrat cu noi la pregătirea pentru Evaluarea Națională și Bacalaureat.'
   },
   blog: {
-    t: 'Blog — Sfaturi pentru elevi și părinți | Centrul de Pregătire Constanța',
+    t: 'Blog — Sfaturi pentru elevi și părinți | Centru de pregătire Constanța',
     d: 'Articole practice despre pregătirea pentru examene, metode de învățare și sprijinul părinților în parcursul școlar.'
   },
   contact: {
-    t: 'Contact — Programează o ședință gratuită | Centrul de Pregătire Constanța',
+    t: 'Contact — Programează o ședință gratuită | Centru de pregătire Constanța',
     d: 'Scrie-ne pe WhatsApp sau completează formularul. Sediu: Strada Soveja nr. 90, Constanța. Răspundem în maxim 24 de ore.'
   },
   confidentialitate: {
-    t: 'Politica de confidențialitate | Centrul de Pregătire Constanța',
+    t: 'Politica de confidențialitate | Centru de pregătire Constanța',
     d: 'Cum colectăm și folosim datele tale, exclusiv pentru a te contacta și a-ți oferi serviciile noastre de meditații.'
   },
   termeni: {
-    t: 'Termeni și condiții | Centrul de Pregătire Constanța',
+    t: 'Termeni și condiții | Centru de pregătire Constanța',
     d: 'Condițiile de colaborare: ședința gratuită, programare, plată, anulare și reprogramare.'
   }
 };
@@ -2856,7 +2857,7 @@ function applySeo(main) {
   set('meta[property="og:description"]', 'content', s.d);
   set('meta[name="twitter:title"]', 'content', s.t);
   set('meta[name="twitter:description"]', 'content', s.d);
-  set('link[rel="canonical"]', 'href', 'https://centruldepregatire.ro/#/' + (main || 'acasa'));
+  set('link[rel="canonical"]', 'href', 'https://centrudepregatire.ro/#/' + (main || 'acasa'));
 }
 const TWEAK_DEFAULTS = {
   "hero": "editorial",

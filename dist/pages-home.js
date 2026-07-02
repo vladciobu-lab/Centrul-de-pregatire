@@ -156,7 +156,7 @@ function HeroEditorial() {
     }
   }, /*#__PURE__*/React.createElement("img", {
     src: "assets/hero-main.webp",
-    alt: "Sesiune de meditații la Centrul de Pregătire Constanța",
+    alt: "Sesiune de meditații la Centru de pregătire Constanța",
     className: "absolute inset-0 w-full h-full object-cover rounded-3xl",
     fetchpriority: "high"
   }), /*#__PURE__*/React.createElement("div", {
@@ -280,7 +280,7 @@ function HeroBold() {
 }
 function VideoPrezentare() {
   const [loaded, setLoaded] = React.useState(false);
-  const id = 'jwFqOM7dfCY';
+  const id = 'cHO5VCknWo8';
   return /*#__PURE__*/React.createElement("div", {
     className: "relative w-full rounded-2xl md:rounded-3xl overflow-hidden shadow-card bg-bordo-deep",
     style: {
@@ -289,7 +289,7 @@ function VideoPrezentare() {
   }, loaded ? /*#__PURE__*/React.createElement("iframe", {
     className: "absolute inset-0 w-full h-full border-0",
     src: 'https://www.youtube.com/embed/' + id + '?rel=0&modestbranding=1&autoplay=1',
-    title: "Prezentare Centrul de Pregătire Constanța",
+    title: "Prezentare Centru de pregătire Constanța",
     allow: "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture",
     allowFullScreen: true
   }) : /*#__PURE__*/React.createElement("button", {
@@ -299,7 +299,7 @@ function VideoPrezentare() {
     "aria-label": "Redă videoclipul de prezentare"
   }, /*#__PURE__*/React.createElement("img", {
     src: 'https://i.ytimg.com/vi/' + id + '/hqdefault.jpg',
-    alt: "Prezentare Centrul de Pregătire Constanța",
+    alt: "Prezentare Centru de pregătire Constanța",
     className: "absolute inset-0 w-full h-full object-cover",
     loading: "lazy"
   }), /*#__PURE__*/React.createElement("span", {
@@ -811,7 +811,7 @@ function HomePage({
   }, ADDRESS)))), /*#__PURE__*/React.createElement("div", {
     className: "aspect-[4/3] rounded-2xl overflow-hidden shadow-soft relative bg-cream-warm mt-4"
   }, /*#__PURE__*/React.createElement("iframe", {
-    title: "Centrul de Pregătire Constanța",
+    title: "Centru de pregătire Constanța",
     src: "https://www.google.com/maps?q=Strada+Soveja+90+Constanta&output=embed",
     className: "absolute inset-0 w-full h-full border-0",
     loading: "lazy",
