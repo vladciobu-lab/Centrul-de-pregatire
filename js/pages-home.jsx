@@ -137,7 +137,7 @@ function HeroBold() {
 
 function VideoPrezentare() {
   const [loaded, setLoaded] = React.useState(false);
-  const id = 'jwFqOM7dfCY';
+  const id = 'cHO5VCknWo8';
   return (
     <div className="relative w-full rounded-2xl md:rounded-3xl overflow-hidden shadow-card bg-bordo-deep" style={{ aspectRatio: '9 / 16' }}>
       {loaded ? (
