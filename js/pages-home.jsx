@@ -224,6 +224,9 @@ function SediuCarousel() {
     { src: 'assets/sediu-1.webp', alt: 'Sala de meditații cu masă și scaune' },
     { src: 'assets/sediu-2.webp', alt: 'Sala de studiu cu lumină naturală' },
     { src: 'assets/sediu-3.jpeg', alt: 'Holul și intrarea în săli' },
+    { src: 'assets/sediu-4.jpg', alt: 'Discuție individuală cu o elevă' },
+    { src: 'assets/sediu-5.jpg', alt: 'Elevi rezolvând exerciții la tablă' },
+    { src: 'assets/sediu-6.jpg', alt: 'Ședință de pregătire unu la unu' },
   ];
   const [i, setI] = React.useState(0);
   const n = IMAGES.length;
