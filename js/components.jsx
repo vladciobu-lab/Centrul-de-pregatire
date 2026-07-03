@@ -50,7 +50,7 @@ function Button({ children, variant = 'primary', size = 'md', href, onClick, cla
     outline: 'border border-bordo/30 text-bordo hover:bg-bordo hover:text-cream',
     ghost: 'text-bordo hover:bg-bordo/5',
     cream: 'bg-cream-warm text-bordo border border-cream-deep hover:bg-cream-deep',
-    whatsapp: 'bg-[#25D366] text-white hover:bg-[#1ebe57] shadow-soft',
+    whatsapp: 'bg-[#075E54] text-white hover:bg-[#054c44] shadow-soft',
   };
   const cls = `${base} ${sizes[size]} ${variants[variant]} ${className}`;
   const content = <>{icon}<span>{children}</span></>;
@@ -206,7 +206,7 @@ function Footer() {
           </div>
 
           <div>
-            <h4 className="text-cream font-semibold text-sm uppercase tracking-wider mb-4">Navigare</h4>
+            <h3 className="text-cream font-semibold text-sm uppercase tracking-wider mb-4">Navigare</h3>
             <ul className="space-y-2 text-sm">
               <li><a href="#/acasa" className="hover:text-rose">Acasă</a></li>
               <li><a href="#/despre" className="hover:text-rose">Despre noi</a></li>
@@ -256,7 +256,7 @@ function Footer() {
               <a href="#/contact" className="hover:text-rose">Contact</a>
             </div>
           </div>
-          <div className="flex flex-wrap gap-x-5 gap-y-2 pt-1 border-t border-cream/10 text-cream/50">
+          <div className="flex flex-wrap gap-x-5 gap-y-2 pt-1 border-t border-cream/10 text-cream/80">
             <span>Soluționarea litigiilor:</span>
             <a href="https://anpc.ro/ce-este-sal/" target="_blank" rel="noopener" className="hover:text-rose underline">ANPC — SAL</a>
             <a href="https://ec.europa.eu/consumers/odr" target="_blank" rel="noopener" className="hover:text-rose underline">Platforma SOL (UE)</a>

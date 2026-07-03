@@ -298,7 +298,7 @@ function VideoPrezentare() {
     onClick: () => setLoaded(true),
     "aria-label": "Redă videoclipul de prezentare"
   }, /*#__PURE__*/React.createElement("img", {
-    src: 'https://i.ytimg.com/vi/' + id + '/hqdefault.jpg',
+    src: "assets/video-prezentare-thumb.jpg",
     alt: "Prezentare Centru de pregătire Constanța",
     className: "absolute inset-0 w-full h-full object-cover",
     loading: "lazy"
@@ -616,7 +616,7 @@ function HomePage({
   }, /*#__PURE__*/React.createElement(Ic, {
     name: w.icon,
     className: "w-6 h-6"
-  })), /*#__PURE__*/React.createElement("h4", {
+  })), /*#__PURE__*/React.createElement("h3", {
     className: "serif-h text-xl text-bordo-deep mb-2"
   }, w.title), /*#__PURE__*/React.createElement("p", {
     className: "text-sm text-ink-muted leading-relaxed"

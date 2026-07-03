@@ -527,7 +527,7 @@ function Button({
     outline: 'border border-bordo/30 text-bordo hover:bg-bordo hover:text-cream',
     ghost: 'text-bordo hover:bg-bordo/5',
     cream: 'bg-cream-warm text-bordo border border-cream-deep hover:bg-cream-deep',
-    whatsapp: 'bg-[#25D366] text-white hover:bg-[#1ebe57] shadow-soft'
+    whatsapp: 'bg-[#075E54] text-white hover:bg-[#054c44] shadow-soft'
   };
   const cls = `${base} ${sizes[size]} ${variants[variant]} ${className}`;
   const content = /*#__PURE__*/React.createElement(React.Fragment, null, icon, /*#__PURE__*/React.createElement("span", null, children));
@@ -773,7 +773,7 @@ function Footer() {
     className: "text-rose text-[10px] uppercase tracking-[0.3em]"
   }, "Constanța"))), /*#__PURE__*/React.createElement("p", {
     className: "text-sm leading-relaxed text-cream/70"
-  }, "Meditații care pleacă de unde ești tu. Pentru orice clasă, orice materie, orice nivel. La sediul nostru din Constanța.")), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("h4", {
+  }, "Meditații care pleacă de unde ești tu. Pentru orice clasă, orice materie, orice nivel. La sediul nostru din Constanța.")), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("h3", {
     className: "text-cream font-semibold text-sm uppercase tracking-wider mb-4"
   }, "Navigare"), /*#__PURE__*/React.createElement("ul", {
     className: "space-y-2 text-sm"
@@ -850,7 +850,7 @@ function Footer() {
     href: "#/contact",
     className: "hover:text-rose"
   }, "Contact"))), /*#__PURE__*/React.createElement("div", {
-    className: "flex flex-wrap gap-x-5 gap-y-2 pt-1 border-t border-cream/10 text-cream/50"
+    className: "flex flex-wrap gap-x-5 gap-y-2 pt-1 border-t border-cream/10 text-cream/80"
   }, /*#__PURE__*/React.createElement("span", null, "Soluționarea litigiilor:"), /*#__PURE__*/React.createElement("a", {
     href: "https://anpc.ro/ce-este-sal/",
     target: "_blank",
@@ -1469,7 +1469,7 @@ function VideoPrezentare() {
     onClick: () => setLoaded(true),
     "aria-label": "Redă videoclipul de prezentare"
   }, /*#__PURE__*/React.createElement("img", {
-    src: 'https://i.ytimg.com/vi/' + id + '/hqdefault.jpg',
+    src: "assets/video-prezentare-thumb.jpg",
     alt: "Prezentare Centru de pregătire Constanța",
     className: "absolute inset-0 w-full h-full object-cover",
     loading: "lazy"
@@ -1787,7 +1787,7 @@ function HomePage({
   }, /*#__PURE__*/React.createElement(Ic, {
     name: w.icon,
     className: "w-6 h-6"
-  })), /*#__PURE__*/React.createElement("h4", {
+  })), /*#__PURE__*/React.createElement("h3", {
     className: "serif-h text-xl text-bordo-deep mb-2"
   }, w.title), /*#__PURE__*/React.createElement("p", {
     className: "text-sm text-ink-muted leading-relaxed"

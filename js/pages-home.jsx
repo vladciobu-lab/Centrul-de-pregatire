@@ -156,7 +156,7 @@ function VideoPrezentare() {
           aria-label="Redă videoclipul de prezentare"
         >
           <img
-            src={'https://i.ytimg.com/vi/' + id + '/hqdefault.jpg'}
+            src="assets/video-prezentare-thumb.jpg"
             alt="Prezentare Centru de pregătire Constanța"
             className="absolute inset-0 w-full h-full object-cover"
             loading="lazy"
@@ -399,7 +399,7 @@ function HomePage({ heroVariant }) {
               <Reveal key={i} delay={i * 80}>
                 <div className="bg-white rounded-2xl p-6 h-full shadow-soft border border-bordo/20 hover:border-bordo/40 transition-colors">
                   <div className="w-11 h-11 rounded-xl bg-teal/10 flex items-center justify-center text-teal-deep mb-4"><Ic name={w.icon} className="w-6 h-6" /></div>
-                  <h4 className="serif-h text-xl text-bordo-deep mb-2">{w.title}</h4>
+                  <h3 className="serif-h text-xl text-bordo-deep mb-2">{w.title}</h3>
                   <p className="text-sm text-ink-muted leading-relaxed">{w.desc}</p>
                 </div>
               </Reveal>
