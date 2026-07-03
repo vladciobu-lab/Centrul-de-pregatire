@@ -367,6 +367,15 @@ function SediuCarousel() {
   }, {
     src: 'assets/sediu-3.jpeg',
     alt: 'Holul și intrarea în săli'
+  }, {
+    src: 'assets/sediu-4.jpg',
+    alt: 'Discuție individuală cu o elevă'
+  }, {
+    src: 'assets/sediu-5.jpg',
+    alt: 'Elevi rezolvând exerciții la tablă'
+  }, {
+    src: 'assets/sediu-6.jpg',
+    alt: 'Ședință de pregătire unu la unu'
   }];
   const [i, setI] = React.useState(0);
   const n = IMAGES.length;

@@ -443,8 +443,7 @@ window.SUBJECTS = SUBJECTS;
 window.TEAM = TEAM;
 window.TESTIMONIALS = TESTIMONIALS;
 window.PRICES = PRICES;
-window.BLOG = BLOG;
-// Shared components: Header, Footer, WhatsApp, Button, Card, SectionTitle, etc.
+window.BLOG = BLOG;// Shared components: Header, Footer, WhatsApp, Button, Card, SectionTitle, etc.
 const {
   useState,
   useEffect,
@@ -1170,8 +1169,7 @@ Object.assign(window, {
   PHONE,
   EMAIL,
   ADDRESS
-});
-// Home page with 3 hero variations.
+});// Home page with 3 hero variations.
 
 // ---------- Discrete line icons ----------
 function Ic({
@@ -1540,6 +1538,15 @@ function SediuCarousel() {
   }, {
     src: 'assets/sediu-3.jpeg',
     alt: 'Holul și intrarea în săli'
+  }, {
+    src: 'assets/sediu-4.jpg',
+    alt: 'Discuție individuală cu o elevă'
+  }, {
+    src: 'assets/sediu-5.jpg',
+    alt: 'Elevi rezolvând exerciții la tablă'
+  }, {
+    src: 'assets/sediu-6.jpg',
+    alt: 'Ședință de pregătire unu la unu'
   }];
   const [i, setI] = React.useState(0);
   const n = IMAGES.length;
@@ -1997,8 +2004,7 @@ function HomePage({
 }
 Object.assign(window, {
   HomePage
-});
-// About + Services pages.
+});// About + Services pages.
 
 function AboutPage() {
   return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(PageHero, {
@@ -2075,8 +2081,7 @@ function AboutPage() {
 }
 Object.assign(window, {
   AboutPage
-});
-// 404 page (subject pages removed).
+});// 404 page (subject pages removed).
 
 function NotFound() {
   return /*#__PURE__*/React.createElement("section", {
@@ -2094,8 +2099,7 @@ function NotFound() {
 }
 Object.assign(window, {
   NotFound
-});
-// Prices + Testimonials pages.
+});// Prices + Testimonials pages.
 
 function PricesPage() {
   return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(PageHero, {
@@ -2169,8 +2173,7 @@ function TestimonialsPage() {
 Object.assign(window, {
   PricesPage,
   TestimonialsPage
-});
-// Blog hub + article pages.
+});// Blog hub + article pages.
 
 // ----- Mini markdown renderer -----
 function renderInline(text) {
@@ -2476,8 +2479,7 @@ Object.assign(window, {
   BlogHubPage,
   BlogArticlePage,
   formatDate
-});
-// Contact + Privacy pages.
+});// Contact + Privacy pages.
 
 function ContactForm({
   compact
@@ -2808,8 +2810,7 @@ Object.assign(window, {
   PrivacyPage,
   TermsPage,
   ContactForm
-});
-// App shell: router, Tweaks integration.
+});// App shell: router, Tweaks integration.
 
 const SEO = {
   acasa: {
