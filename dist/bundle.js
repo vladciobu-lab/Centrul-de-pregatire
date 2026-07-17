@@ -226,6 +226,57 @@ const TESTIMONIALS = [{
   subject: 'Logică (BAC)',
   result: 'Toată materia în 2 luni',
   quote: 'În mai puțin de 2 luni am reușit să învăț toată materia la logică!'
+}, {
+  id: 't8',
+  name: 'Alexia Ors',
+  role: 'Elevă',
+  subject: 'Logică & Română (BAC)',
+  result: 'BAC: 9,45 la logică',
+  quote: 'Am luat nota 9,45 la examenul de bacalaureat la Logică și nu cred că aș fi reușit dacă mergeam în altă parte. Mi s-a explicat de fiecare dată când a fost nevoie, până am înțeles. Recomand atât pregătirea la Logică, cât și la Limba și literatura română. Fără ajutorul Ralucăi, nu aș fi reușit niciodată să rețin poeziile și chiar să ajung în punctul de a le înțelege.'
+}, {
+  id: 't9',
+  name: 'Elmas Efetekin',
+  role: 'Părinte',
+  subject: 'Meditații',
+  quote: 'Am ramas foarte mulțumiți ce acest centru. Profesori bine pregătiți din toate punctele de vedere care își fac treaba cu devotament și pasiune. Va multumim mult.'
+}, {
+  id: 't10',
+  name: 'Delia Rusan',
+  role: 'Elevă',
+  subject: 'Matematică (BAC)',
+  quote: 'Cu ajutorul domnului profesor de matematică am reușit să obțin un rezultat peste așteptările mele la examenul de bac. Mulțumesc frumos! Recomand cu drag!'
+}, {
+  id: 't11',
+  name: 'A C',
+  role: 'Elevă',
+  subject: 'Logică (BAC)',
+  result: 'BAC: 9,50 la logică',
+  quote: 'Cea mai bună alegere pentru bac! Cu ajutorul doamnei profesoare, am reușit să obțin nota 9,50 la logică! O recomand din tot sufletul pentru că este o persoană super dedicată, implicată și devotată. A fost extrem de răbdătoare ori de câte ori am avut nelămuriri și a transformat studiul într-o experiență relaxată, fără stres. Îi mulțumesc mult pentru tot sprijinul acordat și sunt convinsă că oricine va lucra cu dumneaei va avea parte de rezultate excepționale!!'
+}, {
+  id: 't12',
+  name: 'Ana Maria Zanet',
+  role: 'Elevă',
+  subject: 'Meditații',
+  quote: 'O profesoară dedicată, care explică foarte clar și face orele interesante. O recomand cu încredere! Cea mai bună este!!'
+}, {
+  id: 't13',
+  name: 'Maria Irimia',
+  role: 'Elevă',
+  subject: 'Logică (BAC)',
+  result: 'BAC: 9,90 la logică',
+  quote: 'Cu ajutorul doamnei profesoare de Logică, Argumentare și Comunicare am obținut nota 9,90 la proba de bacalaureat. O recomand din tot sufletul! Este o profesoară dedicată, implicată și devotată. Nu urmărește doar să predea materia, ci se asigură că fiecare elev o înțelege cu adevărat. Explică foarte clar și coerent, este calmă și pune accent pe învățarea logică, nu pe memorare. Ori de câte ori am avut nelămuriri sau am avut nevoie de sprijin, m-a îndrumat cu răbdare și mi-a explicat până am înțeles. Îi mulțumesc pentru tot ajutorul oferit și o recomand cu toată încrederea! Sunt convinsă că, alături de dumneaei, rezultatele vor fi foarte exceptionale.'
+}, {
+  id: 't14',
+  name: 'Loredana Vântu',
+  role: 'Elevă',
+  subject: 'Meditații',
+  quote: 'Profesorii sunt tineri, implicați și explică într-un mod ușor de înțeles. Pentru mine a contat mult că nu există presiune sau judecată atunci când greșeam.'
+}, {
+  id: 't15',
+  name: 'Geta Deac',
+  role: 'Elevă',
+  subject: 'Meditații',
+  quote: 'Recomand cu mare drag! Explicațiile sunt foarte clare, iar atmosfera este una calmă și prietenoasă.'
 }];
 const PRICES = [{
   id: 'individual',
