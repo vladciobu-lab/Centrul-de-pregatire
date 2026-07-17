@@ -112,6 +112,50 @@ const SUBJECTS = [{
     how: 'Reluăm capitolul, facem o schemă vizuală, exersăm. Cu timpul îți construiești în cap harta întregului corp.',
     examples: ['Celula, organite și funcții', 'Reproducerea la plante', 'Sistemul digestiv pas cu pas']
   }
+}, {
+  slug: 'engleza',
+  name: 'Limba Engleză',
+  short: 'Engleză',
+  tagline: 'De la reguli de gramatică memorate pe de rost la engleză pe care chiar o vorbești.',
+  icon: '🇬🇧',
+  exams: ['EN', 'BAC'],
+  en: {
+    what: 'Gramatică (timpuri verbale, condiționale, prepoziții), vocabular tematic, înțelegere de text, scriere de scrisori/eseuri scurte.',
+    how: 'Vorbim engleză la fiecare ședință, nu doar despre ea. Exersăm pe texte reale și pe subiecte de la evaluările naționale din anii trecuți.',
+    examples: ['Prezent simplu vs continuu, când exact', 'Scrisoare informală după cerințe date', 'Vocabular pentru descrierea unei imagini', 'Comparative și superlative fără greșeli']
+  },
+  bac: {
+    what: 'Toate timpurile verbale, conditionals, reported speech, vocabular avansat, eseu de opinie, înțelegere de text la nivel de BAC.',
+    how: 'Lucrăm pe subiecte reale de BAC, corectăm greșelile care revin mereu, și exersăm vorbitul, nu doar scrisul.',
+    examples: ['Eseu de opinie structurat', 'Reported speech în context', 'Phrasal verbs frecvente la BAC', 'Conditionals (0, 1, 2, 3) fără confuzii']
+  },
+  recovery: {
+    what: 'Orice clasă. Gramatică rămasă neclară, vocabular sărac, frică de a vorbi.',
+    how: 'Pornim de la ce te blochează concret, exersăm oral și scris până devine automat.',
+    examples: ['Present Perfect vs Past Simple', 'Prepoziții de loc și timp', 'Vocabular de bază pentru conversație']
+  }
+}, {
+  slug: 'informatica',
+  name: 'Informatică',
+  short: 'Informatică',
+  tagline: 'Programarea pare abstractă doar până scrii primul program care chiar funcționează.',
+  icon: '💻',
+  exams: ['EN', 'BAC'],
+  en: {
+    what: 'Algoritmică de bază, pseudocod, noțiuni de programare (C/C++ sau Python, în funcție de programa școlii), structuri de date simple.',
+    how: 'Scriem cod de la prima ședință, nu doar teorie. Rezolvăm probleme pas cu pas, de la cele mai simple la cele de evaluare.',
+    examples: ['Structuri repetitive (for, while)', 'Șiruri de caractere, operații de bază', 'Funcții simple și recursivitate', 'Probleme tipice de evaluare națională']
+  },
+  bac: {
+    what: 'Programa de BAC la informatică: algoritmi, structuri de date (vectori, matrici, liste), subprograme, recursivitate, fișiere text, pe limbajul studiat (C++/Pascal).',
+    how: 'Rezolvăm problemele tip BAC punct cu punct, explicăm logica din spatele fiecărui algoritm, apoi exersezi variante similare.',
+    examples: ['Sortare și căutare pe vectori', 'Probleme cu matrici', 'Subprograme cu parametri', 'Prelucrarea fișierelor text']
+  },
+  recovery: {
+    what: 'Pentru orice clasă care a rămas în urmă la programare sau nu înțelege logica algoritmilor.',
+    how: 'Reluăm de la noțiunile de bază care lipsesc, scriem cod simplu împreună, apoi urcăm în dificultate.',
+    examples: ['Variabile și tipuri de date de la zero', 'Cum gândești un algoritm înainte să scrii cod', 'Depanarea unui program care nu merge']
+  }
 }];
 const TEAM = [{
   id: 'andrei',
