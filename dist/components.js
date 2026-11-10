@@ -320,7 +320,7 @@ function Footer() {
     className: "w-14 h-14 flex-shrink-0 rounded-xl overflow-hidden"
   }, /*#__PURE__*/React.createElement("img", {
     src: "assets/logo-emblem.webp",
-    alt: "",
+    alt: "Centru de pregătire Constanța",
     className: "w-full h-full object-contain"
   })), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
     className: "serif-h text-cream text-lg"

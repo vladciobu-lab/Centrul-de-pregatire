@@ -193,7 +193,7 @@ function Footer() {
           <div>
             <div className="flex items-center gap-3 mb-4">
               <span className="w-14 h-14 flex-shrink-0 rounded-xl overflow-hidden">
-                <img src="assets/logo-emblem.webp" alt="" className="w-full h-full object-contain" />
+                <img src="assets/logo-emblem.webp" alt="Centru de pregătire Constanța" className="w-full h-full object-contain" />
               </span>
               <div>
                 <div className="serif-h text-cream text-lg">Centru de pregătire</div>

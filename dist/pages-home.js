@@ -212,7 +212,7 @@ function HeroSplit() {
     className: "aspect-square relative flex items-center justify-center"
   }, /*#__PURE__*/React.createElement("img", {
     src: "assets/logo.webp",
-    alt: "",
+    alt: "Logo Centru de pregătire Constanța",
     className: "relative w-[92%] object-contain animate-float"
   })), /*#__PURE__*/React.createElement("div", {
     className: "absolute -bottom-6 -left-6 bg-bordo-deep text-cream rounded-2xl p-5 shadow-card-hover max-w-[220px] hidden md:block"
@@ -248,7 +248,7 @@ function HeroBold() {
     }
   }, /*#__PURE__*/React.createElement("img", {
     src: "assets/logo.webp",
-    alt: "",
+    alt: "Logo Centru de pregătire Constanța",
     className: "w-full h-full object-contain"
   })), /*#__PURE__*/React.createElement("div", {
     className: "flourish text-rose text-xs uppercase tracking-[0.3em] font-medium",
