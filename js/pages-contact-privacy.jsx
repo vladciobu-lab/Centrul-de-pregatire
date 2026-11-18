@@ -92,7 +92,7 @@ function ContactForm({ compact }) {
               <label htmlFor="tip">Pentru ce *</label>
               <select id="tip" className={`input ${errors.tip ? 'error' : ''}`} value={form.tip} onChange={e => setField('tip', e.target.value)}>
                 <option value="">Alege opțiunea</option>
-                <option value="Primar">Clasele primare (I–IV)</option>
+                <option value="Primar">Clasele primare (0–IV)</option>
                 <option value="EN">Evaluare Națională (a VIII-a)</option>
                 <option value="BAC">Bacalaureat</option>
                 <option value="Recuperare">Recuperare la materie</option>

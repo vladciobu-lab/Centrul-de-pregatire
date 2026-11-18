@@ -154,7 +154,7 @@ function ContactForm({
     value: ""
   }, "Alege opțiunea"), /*#__PURE__*/React.createElement("option", {
     value: "Primar"
-  }, "Clasele primare (I–IV)"), /*#__PURE__*/React.createElement("option", {
+  }, "Clasele primare (0–IV)"), /*#__PURE__*/React.createElement("option", {
     value: "EN"
   }, "Evaluare Națională (a VIII-a)"), /*#__PURE__*/React.createElement("option", {
     value: "BAC"

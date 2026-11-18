@@ -108,7 +108,7 @@ const SUBJECTS = [
   }
 ];
 
-// Clasele primare (I–IV), afișate separat pe pagina Materii.
+// Clasele primare (0–IV), afișate separat pe pagina Materii.
 const PRIMARY_SUBJECTS = [
   {
     slug: 'primar-romana',
