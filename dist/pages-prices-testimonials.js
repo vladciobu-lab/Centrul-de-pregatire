@@ -50,7 +50,7 @@ function SubjectsPage() {
     className: "mt-10"
   }, /*#__PURE__*/React.createElement(SubjectsGroupHeading, {
     title: "Gimnaziu și liceu",
-    subtitle: "Pregătire pentru Evaluarea Națională și Bacalaureat, plus recuperare pe capitolele rămase în urmă."
+    subtitle: "Pregătire pentru Evaluarea Națională și Bacalaureat, precum și recuperarea capitolelor rămase în urmă."
   }), /*#__PURE__*/React.createElement(SubjectCardGrid, {
     items: window.SUBJECTS
   })), /*#__PURE__*/React.createElement("div", {
