@@ -10,8 +10,8 @@ const SEO = {
     d: 'Pornim de la nivelul tău real și construim pas cu pas. Lucrăm în grupe mici de 2-3 elevi, la sediul din Constanța, cu plan personalizat pentru fiecare elev.'
   },
   materii: {
-    t: 'Materii — Meditații la română, matematică, engleză și altele | Centru de pregătire Constanța',
-    d: 'Meditații în Constanța la română, matematică, logică, istorie, geografie, biologie, engleză și informatică, în grupe mici de 2-3 elevi.'
+    t: 'Materii — Meditații pentru clasele primare, gimnaziu și liceu | Centru de pregătire Constanța',
+    d: 'Meditații în Constanța la română, matematică, logică, istorie și engleză pentru clasele V–XII, plus română, matematică și caligrafie pentru clasele primare.'
   },
   preturi: {
     t: 'Prețuri meditații Constanța | Centru de pregătire',

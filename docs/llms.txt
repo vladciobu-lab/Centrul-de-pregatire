@@ -16,8 +16,9 @@ Site: https://centrudepregatire.ro/ (o singură pagină HTML; secțiunile sunt l
 
 ## Ce oferim
 
-- **Evaluare Națională (clasele V–VIII):** Limba și Literatura Română, Matematică, Limba Engleză, Informatică.
-- **Bacalaureat (clasele IX–XII):** Limba și Literatura Română, Matematică, Logică, Argumentare și Comunicare, Istorie, Geografie, Biologie, Limba Engleză, Informatică.
+- **Evaluare Națională (clasele V–VIII):** Limba și Literatura Română, Matematică, Limba Engleză.
+- **Bacalaureat (clasele IX–XII):** Limba și Literatura Română, Matematică, Logică, Argumentare și Comunicare, Istorie, Limba Engleză.
+- **Clasele primare (I–IV):** Limba Română, Matematică, Caligrafie.
 - **Recuperare la materie:** orice clasă, orice materie; lucrăm exact pe capitolele rămase în urmă.
 - **Format:** la sediu în Constanța, grupe mici de 2-3 elevi, ședințe de 1h 45 min, materiale incluse (fișe, subiecte).
 - **Prima ședință e gratuită:** ședință de cunoaștere cu test inițial complet, fără obligații și fără costuri.

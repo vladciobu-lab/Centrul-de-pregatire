@@ -82,6 +82,7 @@ function ContactForm({ compact }) {
               <select id="materie" className={`input ${errors.materie ? 'error' : ''}`} value={form.materie} onChange={e => setField('materie', e.target.value)}>
                 <option value="">Alege o materie</option>
                 {window.SUBJECTS.map(s => <option key={s.slug} value={s.name}>{s.name}</option>)}
+                <option value="Clasele primare (română, matematică, caligrafie)">Clasele primare (română, matematică, caligrafie)</option>
                 <option value="Mai multe">Mai multe materii</option>
                 <option value="Nu știu încă">Nu știu încă</option>
               </select>
@@ -91,6 +92,7 @@ function ContactForm({ compact }) {
               <label htmlFor="tip">Pentru ce *</label>
               <select id="tip" className={`input ${errors.tip ? 'error' : ''}`} value={form.tip} onChange={e => setField('tip', e.target.value)}>
                 <option value="">Alege opțiunea</option>
+                <option value="Primar">Clasele primare (I–IV)</option>
                 <option value="EN">Evaluare Națională (a VIII-a)</option>
                 <option value="BAC">Bacalaureat</option>
                 <option value="Recuperare">Recuperare la materie</option>
