@@ -102,7 +102,7 @@ const SUBJECTS = [{
   }
 }];
 
-// Clasele primare (I–IV), afișate separat pe pagina Materii.
+// Clasele primare (0–IV), afișate separat pe pagina Materii.
 const PRIMARY_SUBJECTS = [{
   slug: 'primar-romana',
   name: 'Limba Română',
@@ -1377,7 +1377,7 @@ function HeroEditorial() {
     className: "text-base text-ink-muted max-w-xl mx-auto lg:mx-0 mb-8"
   }, "Pentru elevii din clasele ", /*#__PURE__*/React.createElement("strong", {
     className: "text-bordo-deep font-semibold"
-  }, "I–XII"), "."), /*#__PURE__*/React.createElement("div", {
+  }, "0–XII"), "."), /*#__PURE__*/React.createElement("div", {
     className: "flex flex-col sm:flex-row gap-3 justify-center lg:justify-start mb-8"
   }, /*#__PURE__*/React.createElement(Button, {
     href: "contact",
@@ -2763,7 +2763,7 @@ function ContactForm({
     value: ""
   }, "Alege opțiunea"), /*#__PURE__*/React.createElement("option", {
     value: "Primar"
-  }, "Clasele primare (I–IV)"), /*#__PURE__*/React.createElement("option", {
+  }, "Clasele primare (0–IV)"), /*#__PURE__*/React.createElement("option", {
     value: "EN"
   }, "Evaluare Națională (a VIII-a)"), /*#__PURE__*/React.createElement("option", {
     value: "BAC"

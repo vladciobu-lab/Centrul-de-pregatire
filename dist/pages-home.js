@@ -137,7 +137,7 @@ function HeroEditorial() {
     className: "text-base text-ink-muted max-w-xl mx-auto lg:mx-0 mb-8"
   }, "Pentru elevii din clasele ", /*#__PURE__*/React.createElement("strong", {
     className: "text-bordo-deep font-semibold"
-  }, "I–XII"), "."), /*#__PURE__*/React.createElement("div", {
+  }, "0–XII"), "."), /*#__PURE__*/React.createElement("div", {
     className: "flex flex-col sm:flex-row gap-3 justify-center lg:justify-start mb-8"
   }, /*#__PURE__*/React.createElement(Button, {
     href: "contact",

@@ -36,7 +36,7 @@ function HeroEditorial() {
             <p className="text-lg md:text-xl text-ink max-w-xl mx-auto lg:mx-0 leading-relaxed mb-3">
               Meditații în Constanța pentru <strong className="text-bordo-deep font-semibold">Evaluarea Națională</strong>, <strong className="text-bordo-deep font-semibold">Bacalaureat</strong> și recuperare la materie.
             </p>
-            <p className="text-base text-ink-muted max-w-xl mx-auto lg:mx-0 mb-8">Pentru elevii din clasele <strong className="text-bordo-deep font-semibold">I–XII</strong>.</p>
+            <p className="text-base text-ink-muted max-w-xl mx-auto lg:mx-0 mb-8">Pentru elevii din clasele <strong className="text-bordo-deep font-semibold">0–XII</strong>.</p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start mb-8">
               <Button href="contact" variant="primary" size="lg">Programează ședința gratuită</Button>
             </div>
