@@ -155,8 +155,8 @@ function HeroEditorial() {
       aspectRatio: '4 / 5'
     }
   }, /*#__PURE__*/React.createElement("img", {
-    src: "assets/hero-main.webp",
-    alt: "Sesiune de meditații la Centru de pregătire Constanța",
+    src: "assets/hero-mate.webp",
+    alt: "Profesor lucrând cu doi elevi la matematică, la Centrul de pregătire din Constanța",
     className: "absolute inset-0 w-full h-full object-cover rounded-3xl",
     fetchpriority: "high"
   }), /*#__PURE__*/React.createElement("div", {
