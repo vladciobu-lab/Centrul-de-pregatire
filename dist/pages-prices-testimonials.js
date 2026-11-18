@@ -21,15 +21,12 @@ function SubjectCardGrid({
   }, s.tagline)))));
 }
 function SubjectsGroupHeading({
-  kicker,
   title,
   subtitle
 }) {
   return /*#__PURE__*/React.createElement("div", {
     className: "mb-8"
-  }, /*#__PURE__*/React.createElement("div", {
-    className: "text-[11px] uppercase tracking-[0.22em] font-semibold text-teal mb-2"
-  }, kicker), /*#__PURE__*/React.createElement("h2", {
+  }, /*#__PURE__*/React.createElement("h2", {
     className: "serif-h text-3xl md:text-4xl text-bordo-deep mb-2"
   }, title), /*#__PURE__*/React.createElement("p", {
     className: "text-ink-muted max-w-2xl leading-relaxed"
@@ -52,7 +49,6 @@ function SubjectsPage() {
   }), /*#__PURE__*/React.createElement("div", {
     className: "mt-10"
   }, /*#__PURE__*/React.createElement(SubjectsGroupHeading, {
-    kicker: "Clasele V–XII",
     title: "Gimnaziu și liceu",
     subtitle: "Pregătire pentru Evaluarea Națională și Bacalaureat, plus recuperare pe capitolele rămase în urmă."
   }), /*#__PURE__*/React.createElement(SubjectCardGrid, {
@@ -60,7 +56,6 @@ function SubjectsPage() {
   })), /*#__PURE__*/React.createElement("div", {
     className: "mt-24"
   }, /*#__PURE__*/React.createElement(SubjectsGroupHeading, {
-    kicker: "Clasele I–IV",
     title: "Clasele primare",
     subtitle: "Punem bazele bine de la început: citit, scris și socotit, în ritmul copilului."
   }), /*#__PURE__*/React.createElement(SubjectCardGrid, {

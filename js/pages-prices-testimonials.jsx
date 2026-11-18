@@ -18,10 +18,9 @@ function SubjectCardGrid({ items }) {
   );
 }
 
-function SubjectsGroupHeading({ kicker, title, subtitle }) {
+function SubjectsGroupHeading({ title, subtitle }) {
   return (
     <div className="mb-8">
-      <div className="text-[11px] uppercase tracking-[0.22em] font-semibold text-teal mb-2">{kicker}</div>
       <h2 className="serif-h text-3xl md:text-4xl text-bordo-deep mb-2">{title}</h2>
       <p className="text-ink-muted max-w-2xl leading-relaxed">{subtitle}</p>
     </div>
@@ -35,11 +34,11 @@ function SubjectsPage() {
       <section className="py-12 px-4 md:px-6 lg:px-10 max-w-7xl mx-auto">
         <Breadcrumb items={[{label:'Acasă', href:'acasa'}, {label:'Materii'}]} />
         <div className="mt-10">
-          <SubjectsGroupHeading kicker="Clasele V–XII" title="Gimnaziu și liceu" subtitle="Pregătire pentru Evaluarea Națională și Bacalaureat, plus recuperare pe capitolele rămase în urmă." />
+          <SubjectsGroupHeading title="Gimnaziu și liceu" subtitle="Pregătire pentru Evaluarea Națională și Bacalaureat, plus recuperare pe capitolele rămase în urmă." />
           <SubjectCardGrid items={window.SUBJECTS} />
         </div>
         <div className="mt-24">
-          <SubjectsGroupHeading kicker="Clasele I–IV" title="Clasele primare" subtitle="Punem bazele bine de la început: citit, scris și socotit, în ritmul copilului." />
+          <SubjectsGroupHeading title="Clasele primare" subtitle="Punem bazele bine de la început: citit, scris și socotit, în ritmul copilului." />
           <SubjectCardGrid items={window.PRIMARY_SUBJECTS} />
         </div>
         <div className="text-center mt-14 mb-6">
