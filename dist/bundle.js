@@ -4,7 +4,7 @@ const SUBJECTS = [{
   slug: 'romana',
   name: 'Limba și Literatura Română',
   short: 'Română',
-  tagline: 'Înțelegerea textului, gramatică și redactarea eseului, conform programei pentru Evaluarea Națională și Bacalaureat.',
+  tagline: 'Înțelegerea textului, gramatică și redactarea compunerilor și a eseurilor, pas cu pas, după programa fiecărei clase.',
   icon: '📖',
   exams: ['EN', 'BAC'],
   en: {
@@ -26,7 +26,7 @@ const SUBJECTS = [{
   slug: 'matematica',
   name: 'Matematică',
   short: 'Matematică',
-  tagline: 'Algebră, geometrie și analiză matematică, cu accent pe înțelegerea metodelor de rezolvare și pe exercițiu constant.',
+  tagline: 'Algebră, geometrie și analiză matematică, rezolvarea problemelor și exersarea metodelor, adaptate nivelului fiecărui elev.',
   icon: '📐',
   exams: ['EN', 'BAC'],
   en: {
@@ -48,7 +48,7 @@ const SUBJECTS = [{
   slug: 'logica',
   name: 'Logică, Argumentare și Comunicare',
   short: 'Logică',
-  tagline: 'Argumentare, tipuri de raționament și analiza argumentelor, conform programei de Bacalaureat.',
+  tagline: 'Tipuri de argumente, raționament deductiv și inductiv și analiza textelor argumentative, după programa de Bacalaureat.',
   icon: '🧠',
   exams: ['BAC'],
   bac: {
@@ -65,7 +65,7 @@ const SUBJECTS = [{
   slug: 'istorie',
   name: 'Istorie',
   short: 'Istorie',
-  tagline: 'Programa de Bacalaureat, structurată cronologic, cu pregătire pentru analiza surselor istorice și redactarea eseului.',
+  tagline: 'Evenimente și procese istorice, analiza surselor și redactarea eseului structurat, după programa de Bacalaureat.',
   icon: '🏛️',
   exams: ['BAC'],
   bac: {
@@ -82,7 +82,7 @@ const SUBJECTS = [{
   slug: 'engleza',
   name: 'Limba Engleză',
   short: 'Engleză',
-  tagline: 'Gramatică, vocabular, înțelegerea textului și comunicare orală, de la nivelul de bază până la nivelul de examen.',
+  tagline: 'Gramatică, vocabular, înțelegerea textului și comunicare scrisă și orală, adaptate nivelului fiecărui elev.',
   icon: '🇬🇧',
   exams: ['EN', 'BAC'],
   en: {
@@ -107,19 +107,19 @@ const PRIMARY_SUBJECTS = [{
   slug: 'primar-romana',
   name: 'Limba Română',
   short: 'Română (primar)',
-  tagline: 'Citire, scriere corectă, înțelegerea textului și primele compuneri, conform programei școlare.',
+  tagline: 'Citire corectă și fluentă, scriere fără greșeli și înțelegerea textului, pas cu pas, după programa fiecărei clase.',
   icon: '📚'
 }, {
   slug: 'primar-matematica',
   name: 'Matematică',
   short: 'Matematică (primar)',
-  tagline: 'Operații de bază, calcul mental și rezolvarea problemelor, conform programei școlare.',
+  tagline: 'Operații cu numere, rezolvarea problemelor și dezvoltarea gândirii logice, adaptate nivelului fiecărui copil.',
   icon: '🔢'
 }, {
   slug: 'caligrafie',
   name: 'Caligrafie',
   short: 'Caligrafie',
-  tagline: 'Formarea corectă a literelor și dezvoltarea unui scris lizibil și îngrijit.',
+  tagline: 'Scrierea corectă a literelor de mână și formarea unui scris îngrijit și lizibil, de la primele elemente grafice.',
   icon: '✏️'
 }];
 const TEAM = [{
