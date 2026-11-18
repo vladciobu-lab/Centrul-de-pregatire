@@ -5,6 +5,7 @@ import { readFileSync, writeFileSync } from 'fs';
 import { createRequire } from 'module';
 import { fileURLToPath } from 'url';
 import vm from 'vm';
+import { createHash } from 'crypto';
 import { transformFileSync } from '@babel/core';
 import { minify } from 'terser';
 
@@ -65,6 +66,10 @@ let index = readFileSync(indexPath, 'utf8').replace(/^﻿/, '');
 const re = /(<!--prerender:start-->)[\s\S]*?(<!--prerender:end-->)/;
 if (!re.test(index)) throw new Error('Prerender markers not found in docs/index.html');
 index = index.replace(re, () => `<!--prerender:start-->${html}<!--prerender:end-->`);
+
+// Cache-busting: bundle URL gets a content hash, so browsers fetch the new bundle after each deploy.
+const bundleHash = createHash('sha1').update(min.code).digest('hex').slice(0, 10);
+index = index.replace(/dist\/bundle\.min\.js(\?v=[\w]+)?"/g, `dist/bundle.min.js?v=${bundleHash}"`);
 
 // 3. Sanity checks: every JSON-LD block parses, prices in JSON-LD match data.jsx.
 const blocks = [...index.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)];
