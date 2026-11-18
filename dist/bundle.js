@@ -79,40 +79,6 @@ const SUBJECTS = [{
     examples: ['Constituțiile României', 'Mișcarea pașoptistă pe înțelesul tău', 'România în comunism, etape']
   }
 }, {
-  slug: 'geografie',
-  name: 'Geografie',
-  short: 'Geografie',
-  tagline: 'Hartă, climă, populație, tot ce pare „învățat pe de rost" are de fapt o logică.',
-  icon: '🗺️',
-  exams: ['BAC'],
-  bac: {
-    what: 'Europa și România: relief, climă, hidrografie, vegetație, populație, așezări, economie. Harta, citită corect, nu memorată mecanic.',
-    how: 'Lucrăm cu harta în față tot timpul. Înveți să o citești, nu să o memorezi. Diferența se vede la examen, când îți pică un subiect cu hartă mută.',
-    examples: ['Identificare unităților de relief pe harta României', 'Climatul temperat-continental, cauze și efecte', 'Bazinele hidrografice principale', 'Populația și migrația post-1990']
-  },
-  recovery: {
-    what: 'Liceu, mai ales clasa a IX-a și a XI-a. Recapitulări pe capitole, ajutor cu tezele, înțelegerea hărții.',
-    how: 'Pornim de la capitolul greu, îl facem cu harta și exemple concrete, apoi exersezi.',
-    examples: ['Munții Carpați, ce trebuie să știi', 'Statele membre UE, pe regiuni', 'Resursele naturale ale României']
-  }
-}, {
-  slug: 'biologie',
-  name: 'Biologie',
-  short: 'Biologie',
-  tagline: 'Anatomie, genetică, ecologie, explicate ca să-ți rămână, nu ca să le bifezi.',
-  icon: '🧬',
-  exams: ['BAC'],
-  bac: {
-    what: 'Programa BAC: anatomia și fiziologia omului (toate sistemele), genetică, ecologie, evoluție. Profil real și uman, adaptăm conținutul.',
-    how: 'Pornim de la „cum funcționează" și abia apoi venim cu termenii. Așa rămâne, fiindcă a făcut sens, nu fiindcă l-ai bibilit.',
-    examples: ['Sistemul nervos, de la neuron la reflex', 'Genetica, probleme de transmitere a caracterelor', 'Ciclul cardiac pe înțelesul tău', 'Ecosisteme și relații trofice']
-  },
-  recovery: {
-    what: 'Pentru orice clasă, gimnaziu și liceu. Capitole pe care le-ai sărit și acum nu mai prinzi firul.',
-    how: 'Reluăm capitolul, facem o schemă vizuală, exersăm. Cu timpul îți construiești în cap harta întregului corp.',
-    examples: ['Celula, organite și funcții', 'Reproducerea la plante', 'Sistemul digestiv pas cu pas']
-  }
-}, {
   slug: 'engleza',
   name: 'Limba Engleză',
   short: 'Engleză',
@@ -134,28 +100,27 @@ const SUBJECTS = [{
     how: 'Pornim de la ce te blochează concret, exersăm oral și scris până devine automat.',
     examples: ['Present Perfect vs Past Simple', 'Prepoziții de loc și timp', 'Vocabular de bază pentru conversație']
   }
+}];
+
+// Clasele primare (I–IV), afișate separat pe pagina Materii.
+const PRIMARY_SUBJECTS = [{
+  slug: 'primar-romana',
+  name: 'Limba Română',
+  short: 'Română (primar)',
+  tagline: 'Citit fluent, scris corect și primele compuneri, fără lacrimi la teme.',
+  icon: '📚'
 }, {
-  slug: 'informatica',
-  name: 'Informatică',
-  short: 'Informatică',
-  tagline: 'Programarea pare abstractă doar până scrii primul program care chiar funcționează.',
-  icon: '💻',
-  exams: ['EN', 'BAC'],
-  en: {
-    what: 'Algoritmică de bază, pseudocod, noțiuni de programare (C/C++ sau Python, în funcție de programa școlii), structuri de date simple.',
-    how: 'Scriem cod de la prima ședință, nu doar teorie. Rezolvăm probleme pas cu pas, de la cele mai simple la cele de evaluare.',
-    examples: ['Structuri repetitive (for, while)', 'Șiruri de caractere, operații de bază', 'Funcții simple și recursivitate', 'Probleme tipice de evaluare națională']
-  },
-  bac: {
-    what: 'Programa de BAC la informatică: algoritmi, structuri de date (vectori, matrici, liste), subprograme, recursivitate, fișiere text, pe limbajul studiat (C++/Pascal).',
-    how: 'Rezolvăm problemele tip BAC punct cu punct, explicăm logica din spatele fiecărui algoritm, apoi exersezi variante similare.',
-    examples: ['Sortare și căutare pe vectori', 'Probleme cu matrici', 'Subprograme cu parametri', 'Prelucrarea fișierelor text']
-  },
-  recovery: {
-    what: 'Pentru orice clasă care a rămas în urmă la programare sau nu înțelege logica algoritmilor.',
-    how: 'Reluăm de la noțiunile de bază care lipsesc, scriem cod simplu împreună, apoi urcăm în dificultate.',
-    examples: ['Variabile și tipuri de date de la zero', 'Cum gândești un algoritm înainte să scrii cod', 'Depanarea unui program care nu merge']
-  }
+  slug: 'primar-matematica',
+  name: 'Matematică',
+  short: 'Matematică (primar)',
+  tagline: 'Adunări, înmulțiri și probleme cu „câte mere au rămas”, înțelese, nu ghicite.',
+  icon: '🔢'
+}, {
+  slug: 'caligrafie',
+  name: 'Caligrafie',
+  short: 'Caligrafie',
+  tagline: 'Literă cu literă, cu răbdare, până scrisul devine frumos și ușor de citit.',
+  icon: '✏️'
 }];
 const TEAM = [{
   id: 'andrei',
@@ -535,6 +500,7 @@ Deci da, EN cântărește mult, dar și ce ai făcut în gimnaziu contează. Și
 Programează o ședință de cunoaștere gratuită cu noi dacă vrei să vedem împreună exact unde stai. Facem testul, vorbim cu părinții, vă spunem realist ce se poate face. Fără promisiuni goale.`
 }];
 window.SUBJECTS = SUBJECTS;
+window.PRIMARY_SUBJECTS = PRIMARY_SUBJECTS;
 window.TEAM = TEAM;
 window.TESTIMONIALS = TESTIMONIALS;
 window.PRICES = PRICES;
@@ -2188,11 +2154,46 @@ Object.assign(window, {
 });
 // Prices + Testimonials pages.
 
+function SubjectCardGrid({
+  items
+}) {
+  return /*#__PURE__*/React.createElement("div", {
+    className: "grid sm:grid-cols-2 lg:grid-cols-3 gap-5"
+  }, items.map((s, i) => /*#__PURE__*/React.createElement(Reveal, {
+    key: s.slug,
+    delay: i * 60
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "bg-white rounded-2xl shadow-card p-6 md:p-7 h-full border border-transparent flex flex-col"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "flex items-start mb-4"
+  }, /*#__PURE__*/React.createElement("span", {
+    className: "w-12 h-12 rounded-xl bg-cream-warm flex items-center justify-center text-2xl"
+  }, s.icon)), /*#__PURE__*/React.createElement("h3", {
+    className: "serif-h text-2xl text-bordo-deep mb-2"
+  }, s.name), /*#__PURE__*/React.createElement("p", {
+    className: "text-sm text-ink-muted leading-relaxed flex-1"
+  }, s.tagline)))));
+}
+function SubjectsGroupHeading({
+  kicker,
+  title,
+  subtitle
+}) {
+  return /*#__PURE__*/React.createElement("div", {
+    className: "mb-8"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "text-[11px] uppercase tracking-[0.22em] font-semibold text-teal mb-2"
+  }, kicker), /*#__PURE__*/React.createElement("h2", {
+    className: "serif-h text-3xl md:text-4xl text-bordo-deep mb-2"
+  }, title), /*#__PURE__*/React.createElement("p", {
+    className: "text-ink-muted max-w-2xl leading-relaxed"
+  }, subtitle));
+}
 function SubjectsPage() {
   return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(PageHero, {
     kicker: "Materii",
     title: "Pe ce materii lucrăm",
-    subtitle: "Meditații pentru gimnaziu și liceu, în grupe mici de 2-3 elevi. Aceleași prețuri pentru toate materiile."
+    subtitle: "De la primele litere până la Bacalaureat, în grupe mici de 2-3 elevi. Aceleași prețuri pentru toate materiile."
   }), /*#__PURE__*/React.createElement("section", {
     className: "py-12 px-4 md:px-6 lg:px-10 max-w-7xl mx-auto"
   }, /*#__PURE__*/React.createElement(Breadcrumb, {
@@ -2203,21 +2204,22 @@ function SubjectsPage() {
       label: 'Materii'
     }]
   }), /*#__PURE__*/React.createElement("div", {
-    className: "grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mt-10"
-  }, window.SUBJECTS.map((s, i) => /*#__PURE__*/React.createElement(Reveal, {
-    key: s.slug,
-    delay: i * 60
-  }, /*#__PURE__*/React.createElement("div", {
-    className: "bg-white rounded-2xl shadow-card p-6 md:p-7 h-full border border-transparent flex flex-col"
-  }, /*#__PURE__*/React.createElement("div", {
-    className: "flex items-start mb-4"
-  }, /*#__PURE__*/React.createElement("span", {
-    className: "w-12 h-12 rounded-xl bg-cream-warm flex items-center justify-center text-2xl"
-  }, s.icon)), /*#__PURE__*/React.createElement("h2", {
-    className: "serif-h text-2xl text-bordo-deep mb-2"
-  }, s.name), /*#__PURE__*/React.createElement("p", {
-    className: "text-sm text-ink-muted leading-relaxed flex-1"
-  }, s.tagline))))), /*#__PURE__*/React.createElement("div", {
+    className: "mt-10"
+  }, /*#__PURE__*/React.createElement(SubjectsGroupHeading, {
+    kicker: "Clasele V–XII",
+    title: "Gimnaziu și liceu",
+    subtitle: "Pregătire pentru Evaluarea Națională și Bacalaureat, plus recuperare pe capitolele rămase în urmă."
+  }), /*#__PURE__*/React.createElement(SubjectCardGrid, {
+    items: window.SUBJECTS
+  })), /*#__PURE__*/React.createElement("div", {
+    className: "mt-24"
+  }, /*#__PURE__*/React.createElement(SubjectsGroupHeading, {
+    kicker: "Clasele I–IV",
+    title: "Clasele primare",
+    subtitle: "Punem bazele bine de la început: citit, scris și socotit, în ritmul copilului."
+  }), /*#__PURE__*/React.createElement(SubjectCardGrid, {
+    items: window.PRIMARY_SUBJECTS
+  })), /*#__PURE__*/React.createElement("div", {
     className: "text-center mt-14 mb-6"
   }, /*#__PURE__*/React.createElement(Button, {
     href: "contact",
@@ -2744,6 +2746,8 @@ function ContactForm({
     key: s.slug,
     value: s.name
   }, s.name)), /*#__PURE__*/React.createElement("option", {
+    value: "Clasele primare (română, matematică, caligrafie)"
+  }, "Clasele primare (română, matematică, caligrafie)"), /*#__PURE__*/React.createElement("option", {
     value: "Mai multe"
   }, "Mai multe materii"), /*#__PURE__*/React.createElement("option", {
     value: "Nu știu încă"
@@ -2759,6 +2763,8 @@ function ContactForm({
   }, /*#__PURE__*/React.createElement("option", {
     value: ""
   }, "Alege opțiunea"), /*#__PURE__*/React.createElement("option", {
+    value: "Primar"
+  }, "Clasele primare (I–IV)"), /*#__PURE__*/React.createElement("option", {
     value: "EN"
   }, "Evaluare Națională (a VIII-a)"), /*#__PURE__*/React.createElement("option", {
     value: "BAC"
@@ -2950,8 +2956,8 @@ const SEO = {
     d: 'Pornim de la nivelul tău real și construim pas cu pas. Lucrăm în grupe mici de 2-3 elevi, la sediul din Constanța, cu plan personalizat pentru fiecare elev.'
   },
   materii: {
-    t: 'Materii — Meditații la română, matematică, engleză și altele | Centru de pregătire Constanța',
-    d: 'Meditații în Constanța la română, matematică, logică, istorie, geografie, biologie, engleză și informatică, în grupe mici de 2-3 elevi.'
+    t: 'Materii — Meditații pentru clasele primare, gimnaziu și liceu | Centru de pregătire Constanța',
+    d: 'Meditații în Constanța la română, matematică, logică, istorie și engleză pentru clasele V–XII, plus română, matematică și caligrafie pentru clasele primare.'
   },
   preturi: {
     t: 'Prețuri meditații Constanța | Centru de pregătire',

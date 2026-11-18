@@ -136,6 +136,8 @@ function ContactForm({
     key: s.slug,
     value: s.name
   }, s.name)), /*#__PURE__*/React.createElement("option", {
+    value: "Clasele primare (română, matematică, caligrafie)"
+  }, "Clasele primare (română, matematică, caligrafie)"), /*#__PURE__*/React.createElement("option", {
     value: "Mai multe"
   }, "Mai multe materii"), /*#__PURE__*/React.createElement("option", {
     value: "Nu știu încă"
@@ -151,6 +153,8 @@ function ContactForm({
   }, /*#__PURE__*/React.createElement("option", {
     value: ""
   }, "Alege opțiunea"), /*#__PURE__*/React.createElement("option", {
+    value: "Primar"
+  }, "Clasele primare (I–IV)"), /*#__PURE__*/React.createElement("option", {
     value: "EN"
   }, "Evaluare Națională (a VIII-a)"), /*#__PURE__*/React.createElement("option", {
     value: "BAC"
