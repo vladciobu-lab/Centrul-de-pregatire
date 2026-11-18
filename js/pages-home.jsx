@@ -33,9 +33,10 @@ function HeroEditorial() {
         <div className="grid lg:grid-cols-12 gap-10 lg:gap-14 items-center">
           <div className="lg:col-span-6 text-center lg:text-left">
             <h1 className="serif-h text-6xl md:text-7xl lg:text-[5.5rem] text-bordo-deep mb-6 leading-[0.98]">Din complicat,<br/>facem simplu.</h1>
-            <p className="text-lg md:text-xl text-ink max-w-xl mx-auto lg:mx-0 leading-relaxed mb-8">
+            <p className="text-lg md:text-xl text-ink max-w-xl mx-auto lg:mx-0 leading-relaxed mb-3">
               Meditații în Constanța pentru <strong className="text-bordo-deep font-semibold">Evaluarea Națională</strong>, <strong className="text-bordo-deep font-semibold">Bacalaureat</strong> și recuperare la materie.
             </p>
+            <p className="text-base text-ink-muted max-w-xl mx-auto lg:mx-0 mb-8">Pentru elevii din clasele <strong className="text-bordo-deep font-semibold">I–XII</strong>.</p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start mb-8">
               <Button href="contact" variant="primary" size="lg">Programează ședința gratuită</Button>
             </div>
