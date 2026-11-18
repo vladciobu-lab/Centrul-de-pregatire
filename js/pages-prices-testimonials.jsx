@@ -34,7 +34,7 @@ function SubjectsPage() {
       <section className="py-12 px-4 md:px-6 lg:px-10 max-w-7xl mx-auto">
         <Breadcrumb items={[{label:'Acasă', href:'acasa'}, {label:'Materii'}]} />
         <div className="mt-10">
-          <SubjectsGroupHeading title="Gimnaziu și liceu" subtitle="Pregătire pentru Evaluarea Națională și Bacalaureat, plus recuperare pe capitolele rămase în urmă." />
+          <SubjectsGroupHeading title="Gimnaziu și liceu" subtitle="Pregătire pentru Evaluarea Națională și Bacalaureat, precum și recuperarea capitolelor rămase în urmă." />
           <SubjectCardGrid items={window.SUBJECTS} />
         </div>
         <div className="mt-24">
