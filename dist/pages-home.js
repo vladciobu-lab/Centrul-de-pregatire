@@ -128,12 +128,16 @@ function HeroEditorial() {
   }, /*#__PURE__*/React.createElement("h1", {
     className: "serif-h text-6xl md:text-7xl lg:text-[5.5rem] text-bordo-deep mb-6 leading-[0.98]"
   }, "Din complicat,", /*#__PURE__*/React.createElement("br", null), "facem simplu."), /*#__PURE__*/React.createElement("p", {
-    className: "text-lg md:text-xl text-ink max-w-xl mx-auto lg:mx-0 leading-relaxed mb-8"
+    className: "text-lg md:text-xl text-ink max-w-xl mx-auto lg:mx-0 leading-relaxed mb-3"
   }, "Meditații în Constanța pentru ", /*#__PURE__*/React.createElement("strong", {
     className: "text-bordo-deep font-semibold"
   }, "Evaluarea Națională"), ", ", /*#__PURE__*/React.createElement("strong", {
     className: "text-bordo-deep font-semibold"
-  }, "Bacalaureat"), " și recuperare la materie."), /*#__PURE__*/React.createElement("div", {
+  }, "Bacalaureat"), " și recuperare la materie."), /*#__PURE__*/React.createElement("p", {
+    className: "text-base text-ink-muted max-w-xl mx-auto lg:mx-0 mb-8"
+  }, "Pentru elevii din clasele ", /*#__PURE__*/React.createElement("strong", {
+    className: "text-bordo-deep font-semibold"
+  }, "I–XII"), "."), /*#__PURE__*/React.createElement("div", {
     className: "flex flex-col sm:flex-row gap-3 justify-center lg:justify-start mb-8"
   }, /*#__PURE__*/React.createElement(Button, {
     href: "contact",
