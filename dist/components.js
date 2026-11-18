@@ -215,6 +215,9 @@ function Header({
     to: "despre",
     active: route === 'despre'
   }, "Despre"), /*#__PURE__*/React.createElement(NavLink, {
+    to: "materii",
+    active: route.startsWith('materii')
+  }, "Materii"), /*#__PURE__*/React.createElement(NavLink, {
     to: "preturi",
     active: route === 'preturi'
   }, "Prețuri"), /*#__PURE__*/React.createElement(NavLink, {
@@ -253,6 +256,9 @@ function Header({
     href: '#/' + l.to,
     className: "block px-3 py-3 rounded-lg hover:bg-white text-[15px] font-medium text-ink"
   }, l.label)), /*#__PURE__*/React.createElement("a", {
+    href: "#/materii",
+    className: "block px-3 py-3 rounded-lg hover:bg-white text-[15px] font-medium text-ink"
+  }, "Materii"), /*#__PURE__*/React.createElement("a", {
     href: "#/preturi",
     className: "block px-3 py-3 rounded-lg hover:bg-white text-[15px] font-medium text-ink"
   }, "Prețuri"), /*#__PURE__*/React.createElement("a", {

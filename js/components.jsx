@@ -124,6 +124,7 @@ function Header({ route }) {
           <nav className="hidden lg:flex items-center gap-8">
             <NavLink to="acasa" active={route === 'acasa' || route === ''}>Acasă</NavLink>
             <NavLink to="despre" active={route === 'despre'}>Despre</NavLink>
+            <NavLink to="materii" active={route.startsWith('materii')}>Materii</NavLink>
             <NavLink to="preturi" active={route === 'preturi'}>Prețuri</NavLink>
             <NavLink to="contact" active={route === 'contact'}>Contact</NavLink>
           </nav>
@@ -148,6 +149,7 @@ function Header({ route }) {
           {[{ to: 'acasa', label: 'Acasă' }, { to: 'despre', label: 'Despre' }].map(l => (
             <a key={l.to} href={'#/' + l.to} className="block px-3 py-3 rounded-lg hover:bg-white text-[15px] font-medium text-ink">{l.label}</a>
           ))}
+          <a href="#/materii" className="block px-3 py-3 rounded-lg hover:bg-white text-[15px] font-medium text-ink">Materii</a>
           <a href="#/preturi" className="block px-3 py-3 rounded-lg hover:bg-white text-[15px] font-medium text-ink">Prețuri</a>
           <a href="#/testimoniale" className="block px-3 py-3 rounded-lg hover:bg-white text-[15px] font-medium text-ink">Testimoniale</a>
           <a href="#/contact" className="block px-3 py-3 rounded-lg hover:bg-white text-[15px] font-medium text-ink">Contact</a>
