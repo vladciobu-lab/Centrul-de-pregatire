@@ -687,25 +687,6 @@ function HomePage({
   }, s.title), /*#__PURE__*/React.createElement("p", {
     className: "text-ink-muted text-[15px] md:text-base leading-relaxed"
   }, s.desc))))))), /*#__PURE__*/React.createElement("section", {
-    className: "py-20 md:py-28 px-4 md:px-6 lg:px-10 max-w-7xl mx-auto"
-  }, /*#__PURE__*/React.createElement(SectionTitle, {
-    title: "Pe ce materii lucrăm"
-  }), /*#__PURE__*/React.createElement("div", {
-    className: "grid sm:grid-cols-2 lg:grid-cols-3 gap-5"
-  }, window.SUBJECTS.map((s, i) => /*#__PURE__*/React.createElement(Reveal, {
-    key: s.slug,
-    delay: i * 60
-  }, /*#__PURE__*/React.createElement("div", {
-    className: "bg-white rounded-2xl shadow-card p-6 md:p-7 h-full border border-transparent flex flex-col"
-  }, /*#__PURE__*/React.createElement("div", {
-    className: "flex items-start mb-4"
-  }, /*#__PURE__*/React.createElement("span", {
-    className: "w-12 h-12 rounded-xl bg-cream-warm flex items-center justify-center text-2xl"
-  }, s.icon)), /*#__PURE__*/React.createElement("h3", {
-    className: "serif-h text-2xl text-bordo-deep mb-2"
-  }, s.name), /*#__PURE__*/React.createElement("p", {
-    className: "text-sm text-ink-muted leading-relaxed flex-1"
-  }, s.tagline)))))), /*#__PURE__*/React.createElement("section", {
     className: "py-20 md:py-28 px-4 md:px-6 lg:px-10 bg-white"
   }, /*#__PURE__*/React.createElement("div", {
     className: "max-w-6xl mx-auto"

@@ -9,6 +9,10 @@ const SEO = {
     t: 'Despre noi — Cum lucrăm | Centru de pregătire Constanța',
     d: 'Pornim de la nivelul tău real și construim pas cu pas. Lucrăm în grupe mici de 2-3 elevi, la sediul din Constanța, cu plan personalizat pentru fiecare elev.'
   },
+  materii: {
+    t: 'Materii — Meditații la română, matematică, engleză și altele | Centru de pregătire Constanța',
+    d: 'Meditații în Constanța la română, matematică, logică, istorie, geografie, biologie, engleză și informatică, în grupe mici de 2-3 elevi.'
+  },
   preturi: {
     t: 'Prețuri meditații Constanța | Centru de pregătire',
     d: 'Vezi prețurile pentru meditații în grupe mici de 2-3 elevi. Prima ședință de cunoaștere și testul inițial sunt gratuite.'
@@ -128,6 +132,9 @@ function App() {
       break;
     case 'despre':
       page = /*#__PURE__*/React.createElement(AboutPage, null);
+      break;
+    case 'materii':
+      page = /*#__PURE__*/React.createElement(SubjectsPage, null);
       break;
     case 'preturi':
       page = /*#__PURE__*/React.createElement(PricesPage, null);

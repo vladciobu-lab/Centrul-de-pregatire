@@ -3,6 +3,7 @@
 const SEO = {
   acasa:             { t: 'Meditații Constanța — Evaluare Națională & Bacalaureat | Centru de pregătire', d: 'Meditații în Constanța pentru orice clasă și materie. Pregătire pentru Evaluarea Națională, Bacalaureat și recuperare la materie, la sediu în Constanța. Prima ședință e gratuită.' },
   despre:            { t: 'Despre noi — Cum lucrăm | Centru de pregătire Constanța', d: 'Pornim de la nivelul tău real și construim pas cu pas. Lucrăm în grupe mici de 2-3 elevi, la sediul din Constanța, cu plan personalizat pentru fiecare elev.' },
+  materii:           { t: 'Materii — Meditații la română, matematică, engleză și altele | Centru de pregătire Constanța', d: 'Meditații în Constanța la română, matematică, logică, istorie, geografie, biologie, engleză și informatică, în grupe mici de 2-3 elevi.' },
   preturi:           { t: 'Prețuri meditații Constanța | Centru de pregătire', d: 'Vezi prețurile pentru meditații în grupe mici de 2-3 elevi. Prima ședință de cunoaștere și testul inițial sunt gratuite.' },
   testimoniale:      { t: 'Testimoniale — Ce spun elevii și părinții | Centru de pregătire Constanța', d: 'Rezultate reale și experiențe ale elevilor și părinților care au lucrat cu noi la pregătirea pentru Evaluarea Națională și Bacalaureat.' },
   blog:              { t: 'Blog — Sfaturi pentru elevi și părinți | Centru de pregătire Constanța', d: 'Articole practice despre pregătirea pentru examene, metode de învățare și sprijinul părinților în parcursul școlar.' },
@@ -88,6 +89,8 @@ function App() {
       page = <HomePage heroVariant={tweaks.hero} />; break;
     case 'despre':
       page = <AboutPage />; break;
+    case 'materii':
+      page = <SubjectsPage />; break;
     case 'preturi':
       page = <PricesPage />; break;
     case 'testimoniale':

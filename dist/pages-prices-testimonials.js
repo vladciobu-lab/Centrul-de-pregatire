@@ -1,5 +1,42 @@
 // Prices + Testimonials pages.
 
+function SubjectsPage() {
+  return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(PageHero, {
+    kicker: "Materii",
+    title: "Pe ce materii lucrăm",
+    subtitle: "Meditații pentru gimnaziu și liceu, în grupe mici de 2-3 elevi. Aceleași prețuri pentru toate materiile."
+  }), /*#__PURE__*/React.createElement("section", {
+    className: "py-12 px-4 md:px-6 lg:px-10 max-w-7xl mx-auto"
+  }, /*#__PURE__*/React.createElement(Breadcrumb, {
+    items: [{
+      label: 'Acasă',
+      href: 'acasa'
+    }, {
+      label: 'Materii'
+    }]
+  }), /*#__PURE__*/React.createElement("div", {
+    className: "grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mt-10"
+  }, window.SUBJECTS.map((s, i) => /*#__PURE__*/React.createElement(Reveal, {
+    key: s.slug,
+    delay: i * 60
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "bg-white rounded-2xl shadow-card p-6 md:p-7 h-full border border-transparent flex flex-col"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "flex items-start mb-4"
+  }, /*#__PURE__*/React.createElement("span", {
+    className: "w-12 h-12 rounded-xl bg-cream-warm flex items-center justify-center text-2xl"
+  }, s.icon)), /*#__PURE__*/React.createElement("h2", {
+    className: "serif-h text-2xl text-bordo-deep mb-2"
+  }, s.name), /*#__PURE__*/React.createElement("p", {
+    className: "text-sm text-ink-muted leading-relaxed flex-1"
+  }, s.tagline))))), /*#__PURE__*/React.createElement("div", {
+    className: "text-center mt-14 mb-6"
+  }, /*#__PURE__*/React.createElement(Button, {
+    href: "contact",
+    variant: "primary",
+    size: "md"
+  }, "Programează ședința gratuită"))));
+}
 function PricesPage() {
   return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(PageHero, {
     kicker: "Prețuri",
@@ -70,6 +107,7 @@ function TestimonialsPage() {
   }))))));
 }
 Object.assign(window, {
+  SubjectsPage,
   PricesPage,
   TestimonialsPage
 });

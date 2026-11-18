@@ -36,8 +36,9 @@ Site: https://centrudepregatire.ro/ (o singură pagină HTML; secțiunile sunt l
 
 ## Pagini
 
-- [Acasă](https://centrudepregatire.ro/): prezentare, materii, prețuri, testimoniale, contact
+- [Acasă](https://centrudepregatire.ro/): prezentare, prețuri, testimoniale, contact
 - [Despre noi](https://centrudepregatire.ro/#/despre): cum lucrăm, sediul
+- [Materii](https://centrudepregatire.ro/#/materii): toate materiile la care facem meditații
 - [Prețuri](https://centrudepregatire.ro/#/preturi): pachete și ședința gratuită
 - [Testimoniale](https://centrudepregatire.ro/#/testimoniale): păreri ale elevilor și părinților
 - [Contact](https://centrudepregatire.ro/#/contact): formular, telefon, adresă, program
