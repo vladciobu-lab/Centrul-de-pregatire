@@ -4,7 +4,7 @@ const SUBJECTS = [{
   slug: 'romana',
   name: 'Limba și Literatura Română',
   short: 'Română',
-  tagline: 'De la „nu știu ce să scriu" la eseu care chiar spune ceva.',
+  tagline: 'Înțelegerea textului, gramatică și redactarea eseului, conform programei pentru Evaluarea Națională și Bacalaureat.',
   icon: '📖',
   exams: ['EN', 'BAC'],
   en: {
@@ -26,7 +26,7 @@ const SUBJECTS = [{
   slug: 'matematica',
   name: 'Matematică',
   short: 'Matematică',
-  tagline: 'Crezi că matematica nu e pentru tine? Hai să te contrazicem.',
+  tagline: 'Algebră, geometrie și analiză matematică, cu accent pe înțelegerea metodelor de rezolvare și pe exercițiu constant.',
   icon: '📐',
   exams: ['EN', 'BAC'],
   en: {
@@ -48,7 +48,7 @@ const SUBJECTS = [{
   slug: 'logica',
   name: 'Logică, Argumentare și Comunicare',
   short: 'Logică',
-  tagline: 'Materia care pare grea pentru că nimeni nu îți spune la ce folosește.',
+  tagline: 'Argumentare, tipuri de raționament și analiza argumentelor, conform programei de Bacalaureat.',
   icon: '🧠',
   exams: ['BAC'],
   bac: {
@@ -65,7 +65,7 @@ const SUBJECTS = [{
   slug: 'istorie',
   name: 'Istorie',
   short: 'Istorie',
-  tagline: 'Dacă o tratezi ca povestire, e ușor. Hai să o tratăm așa.',
+  tagline: 'Programa de Bacalaureat, structurată cronologic, cu pregătire pentru analiza surselor istorice și redactarea eseului.',
   icon: '🏛️',
   exams: ['BAC'],
   bac: {
@@ -82,7 +82,7 @@ const SUBJECTS = [{
   slug: 'engleza',
   name: 'Limba Engleză',
   short: 'Engleză',
-  tagline: 'De la reguli de gramatică memorate pe de rost la engleză pe care chiar o vorbești.',
+  tagline: 'Gramatică, vocabular, înțelegerea textului și comunicare orală, de la nivelul de bază până la nivelul de examen.',
   icon: '🇬🇧',
   exams: ['EN', 'BAC'],
   en: {
@@ -107,19 +107,19 @@ const PRIMARY_SUBJECTS = [{
   slug: 'primar-romana',
   name: 'Limba Română',
   short: 'Română (primar)',
-  tagline: 'Citit fluent, scris corect și primele compuneri, fără lacrimi la teme.',
+  tagline: 'Citire, scriere corectă, înțelegerea textului și primele compuneri, conform programei școlare.',
   icon: '📚'
 }, {
   slug: 'primar-matematica',
   name: 'Matematică',
   short: 'Matematică (primar)',
-  tagline: 'Adunări, înmulțiri și probleme cu „câte mere au rămas”, înțelese, nu ghicite.',
+  tagline: 'Operații de bază, calcul mental și rezolvarea problemelor, conform programei școlare.',
   icon: '🔢'
 }, {
   slug: 'caligrafie',
   name: 'Caligrafie',
   short: 'Caligrafie',
-  tagline: 'Literă cu literă, cu răbdare, până scrisul devine frumos și ușor de citit.',
+  tagline: 'Formarea corectă a literelor și dezvoltarea unui scris lizibil și îngrijit.',
   icon: '✏️'
 }];
 const TEAM = [{
